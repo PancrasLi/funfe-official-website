@@ -5,21 +5,21 @@ layout: home
 hero:
   name: "FUN-FE"
   text: "乐前端"
-  tagline: Coding is Fun
+  tagline: Coding is Fun 
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 灵感迸发中...
+      link: 
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 持续更新...
+      link: 
 
 features:
-  - title: 持续
-    details: 
-  - title: 热爱
-    details: 
-  - title: 进步
-    details: 
+  # - title: 持续
+  #   details: 
+  # - title: 热爱
+  #   details: 
+  # - title: 
+  #   details: 
 ---
 
