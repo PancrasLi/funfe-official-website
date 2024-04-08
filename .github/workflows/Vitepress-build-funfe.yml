@@ -1,1 +1,19 @@
+name: Vitepress-build-funfe
 
+on :
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+        - uses: actions/checkout@v2
+          with:
+            node-version: 20
+            fetch-depth: 0
+        - uses: actions/setup-node@v2
+          with:
+            node-version: 20
+        - run: npm install
+        - run: npm run docs:build
