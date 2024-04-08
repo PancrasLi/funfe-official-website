@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "FUN-FE"
   text: "乐前端"
-  tagline: My great project tagline
+  tagline: Coding is Fun
   actions:
     - theme: brand
       text: Markdown Examples
