@@ -17,12 +17,6 @@ jobs:
             node-version: 20
         - run: npm install
         - run: npm run docs:build --outDir docs
-            
-        - uses: peaceiris/actions-gh-pages@v3
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: docs
-            cname: www.funfe.cn
-           
+          
            
         
