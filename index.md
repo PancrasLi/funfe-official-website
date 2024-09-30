@@ -1,10 +1,9 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-
 hero:
-  name: "FUN-FE"
-  text: "乐前端"
+  name: "FUNFE"
+  text: "让代码变得有趣"
   tagline: Coding is Fun 
   actions:
     - theme: brand
@@ -13,7 +12,9 @@ hero:
     - theme: alt
       text: 持续更新...
       link: 
-
+  image:
+    src: /images/logo.svg
+    
 features:
   # - title: 持续
   #   details: 
