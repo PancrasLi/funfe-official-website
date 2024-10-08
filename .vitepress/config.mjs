@@ -8,7 +8,7 @@ export default defineConfig({
     lang: "zh-CN",
     nav: [
       { text: "首页", link: "/" },
-      { text: "js权威指南", link: "/class/js/index" },
+      { text: "javascript高级程序设计", link: "/class/js/index" },
       { text: "博客", link: "https://blog.funfe.cn/" },
     ],
     outline:{
@@ -16,9 +16,10 @@ export default defineConfig({
     },
     sidebar: {
       "/class/js/": {
-        text: "js权威指南",
+        text: "javascript高级程序设计",
         items: [
           { text: "开始", link: "/class/js/index" },
+          { text: "内容", link: "/class/js/index" },
          
         ],
       },
