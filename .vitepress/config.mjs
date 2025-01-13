@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import container from 'markdown-it-container'
 
 
 // https://vitepress.dev/reference/site-config
@@ -23,6 +24,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: 'javascript学习记录', link: '/class/js/index.md' },
+      { text: '在线编辑器', link: '/playground/' },
       { text: '博客', link: 'https://blog.funfe.cn' }
     ],
 
@@ -101,7 +103,7 @@ export default defineConfig({
 
     footer: {
       message: '基于 MIT 许可发布',
-      copyright: 'Copyright © 2024-present FUNFE'
+      copyright: 'Copyright © 2025-present FUNFE'
     },
 
     // 搜索配置
@@ -156,5 +158,24 @@ export default defineConfig({
 
     // 语言切换文本
     langMenuLabel: '切换语言'
+  },
+  markdown: {
+    config: (md) => {
+      md.use(container, 'playground', {
+        validate: function(params) {
+          return params.trim().match(/^playground/)
+        },
+        render: function(tokens, idx) {
+          if (tokens[idx].nesting === 1) {
+            const content = tokens[idx + 1].content
+            // 对 HTML 结束标签进行转义
+            const escapedContent = content.replace(/<\//g, '<\\/')
+            return `<CodePlayground code="${encodeURIComponent(escapedContent)}">\n`
+          } else {
+            return '</CodePlayground>\n'
+          }
+        }
+      })
+    }
   }
 })
