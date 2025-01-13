@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as s}from"./chunks/framework.Roe_i2vO.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"class/js/1.md","filePath":"class/js/1.md","lastUpdated":1736738193000}'),a={name:"class/js/1.md"};function c(r,o,n,d,p,_){return s(),t("div")}const m=e(a,[["render",c]]);export{i as __pageData,m as default};
