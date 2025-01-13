@@ -1,5 +1,4 @@
 import { defineConfig } from "vitepress";
-import container from 'markdown-it-container'
 
 
 // https://vitepress.dev/reference/site-config
@@ -24,7 +23,46 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: 'javascript学习记录', link: '/class/js/index.md' },
-      { text: '在线编辑器', link: '/playground/' },
+      {
+        text: '在线工具',
+        items: [
+          {
+            text: '编码工具',
+            items: [
+              { text: 'Base64 转换', link: '/tools/encoding/base64' },
+              { text: 'URL 编解码', link: '/tools/encoding/url' },
+              { text: 'JSON 格式化', link: '/tools/encoding/json' },
+              { text: 'HTML 实体转换', link: '/tools/encoding/html-entity' },
+            ]
+          },
+          {
+            text: '图片工具',
+            items: [
+              { text: '图片转 Base64', link: '/tools/image/to-base64' },
+            ]
+          },
+          {
+            text: '颜色工具',
+            items: [
+              { text: '调色板', link: '/tools/color/picker' },
+              { text: '颜色转换', link: '/tools/color/converter' },
+              { text: '渐变生成器', link: '/tools/color/gradient' },
+            ]
+          },
+        ]
+      },
+      {
+        text: '少儿编程',
+        items: [
+          {
+            text: '入门',
+            items: [
+              { text: '图形绘制', link: '/games/kids/drawing' },
+              { text: '迷宫冒险', link: '/games/kids/adventure' },
+            ]
+          }
+        ]
+      },
       { text: '博客', link: 'https://blog.funfe.cn' }
     ],
 
@@ -94,6 +132,44 @@ export default defineConfig({
             { text: '第二十八章 最佳实践', link: '/class/js/28' }
           ]
         }
+      ],
+      '/tools/': [
+        {
+          text: '编码工具',
+          collapsed: false,
+          items: [
+            { text: 'Base64 转换', link: '/tools/encoding/base64' },
+            { text: 'URL 编解码', link: '/tools/encoding/url' },
+            { text: 'JSON 格式化', link: '/tools/encoding/json' },
+            { text: 'HTML 实体转换', link: '/tools/encoding/html-entity' },
+          ]
+        },
+        {
+          text: '图片工具',
+          collapsed: false,
+          items: [
+            { text: '图片转 Base64', link: '/tools/image/to-base64' },
+          ]
+        },
+        {
+          text: '颜色工具',
+          collapsed: false,
+          items: [
+            { text: '调色板', link: '/tools/color/picker' },
+            { text: '颜色转换', link: '/tools/color/converter' },
+            { text: '渐变生成器', link: '/tools/color/gradient' },
+          ]
+        },
+      ],
+      '/games/': [
+        {
+          text: '入门',
+          collapsed: false,
+          items: [
+            { text: '图形绘制', link: '/games/kids/drawing' },
+            { text: '迷宫冒险', link: '/games/kids/adventure' },
+          ]
+        }
       ]
     },
 
@@ -159,23 +235,4 @@ export default defineConfig({
     // 语言切换文本
     langMenuLabel: '切换语言'
   },
-  markdown: {
-    config: (md) => {
-      md.use(container, 'playground', {
-        validate: function(params) {
-          return params.trim().match(/^playground/)
-        },
-        render: function(tokens, idx) {
-          if (tokens[idx].nesting === 1) {
-            const content = tokens[idx + 1].content
-            // 对 HTML 结束标签进行转义
-            const escapedContent = content.replace(/<\//g, '<\\/')
-            return `<CodePlayground code="${encodeURIComponent(escapedContent)}">\n`
-          } else {
-            return '</CodePlayground>\n'
-          }
-        }
-      })
-    }
-  }
 })
