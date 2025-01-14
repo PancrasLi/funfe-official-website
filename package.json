@@ -21,6 +21,7 @@
     "highlight.js": "^11.11.1",
     "markdown-it-container": "^4.0.0",
     "monaco-editor": "^0.52.2",
+    "three": "^0.172.0",
     "vue-codemirror": "^6.1.1"
   }
 }

@@ -9,6 +9,9 @@ hero:
     - theme: brand
       text: 关于本站
       link: /about/index.md
+    - theme: alt
+      text: 在线编辑器
+      link: /playground
   image:
     src: /images/logo.svg
     

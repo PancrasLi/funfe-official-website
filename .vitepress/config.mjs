@@ -63,6 +63,7 @@ export default defineConfig({
           }
         ]
       },
+      { text: '在线编辑器', link: '/playground/' },
       { text: '博客', link: 'https://blog.funfe.cn' }
     ],
 
