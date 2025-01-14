@@ -59,11 +59,12 @@ export default defineConfig({
             items: [
               { text: '图形绘制', link: '/games/kids/drawing' },
               { text: '迷宫冒险', link: '/games/kids/adventure' },
+              { text: '图案创作', link: '/games/kids/pattern' },
+              { text: '动画基础', link: '/games/kids/animation' },
             ]
           }
         ]
       },
-      { text: '在线编辑器', link: '/playground/' },
       { text: '博客', link: 'https://blog.funfe.cn' }
     ],
 
@@ -169,6 +170,8 @@ export default defineConfig({
           items: [
             { text: '图形绘制', link: '/games/kids/drawing' },
             { text: '迷宫冒险', link: '/games/kids/adventure' },
+            { text: '图案创作', link: '/games/kids/pattern' },
+            { text: '动画基础', link: '/games/kids/animation' },
           ]
         }
       ]
