@@ -239,4 +239,9 @@ export default defineConfig({
     // 语言切换文本
     langMenuLabel: '切换语言'
   },
+  vite: {
+    optimizeDeps: {
+      include: ['three']
+    }
+  }
 })
