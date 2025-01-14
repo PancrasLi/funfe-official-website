@@ -303,4 +303,80 @@ button:disabled {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
 }
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .game-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .maze {
+    overflow-x: auto;
+    padding: 10px;
+  }
+  
+  .maze-row {
+    min-width: fit-content;
+  }
+  
+  .maze-cell {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .command-buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .action-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .action-buttons button {
+    flex: 1 1 auto;
+    min-width: 100px;
+  }
+  
+  .command-list {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .toast {
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+/* 添加滚动条样式 */
+.command-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.command-list::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-soft);
+  border-radius: 3px;
+}
+
+.command-list::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand);
+  border-radius: 3px;
+}
+
+.maze::-webkit-scrollbar {
+  height: 6px;
+}
+
+.maze::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-soft);
+  border-radius: 3px;
+}
+
+.maze::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand);
+  border-radius: 3px;
+}
 </style>

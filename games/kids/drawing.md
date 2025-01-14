@@ -235,4 +235,40 @@ button:hover {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
 }
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .game-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .canvas-container {
+    overflow-x: auto;
+    padding: 5px;
+  }
+  
+  canvas {
+    min-width: 300px;
+  }
+  
+  .command-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .action-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .action-buttons button {
+    flex: 1 1 auto;
+    min-width: 120px;
+  }
+  
+  .toast {
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
 </style> 
