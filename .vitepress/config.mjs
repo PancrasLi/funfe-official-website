@@ -25,7 +25,13 @@ export default defineConfig({
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'FUNFE - 让代码变得有趣' }],
     ['meta', { name: 'twitter:description', content: '让代码变得有趣' }],
-    ['meta', { name: 'twitter:image', content: '/images/logo.svg' }]
+    ['meta', { name: 'twitter:image', content: '/images/logo.svg' }],
+    ['script', {
+      async: true,
+      src: 'https://cdn.counter.dev/script.js',
+      'data-id': 'e5e1bf1c-e339-41ba-8502-dd9b7815447d',
+      'data-utcoffset': '8'
+    }]
   ],
 
   themeConfig: {
