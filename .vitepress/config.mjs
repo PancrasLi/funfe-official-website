@@ -87,17 +87,7 @@ export default defineConfig({
       },
       {
         text: '少儿编程',
-        items: [
-          {
-            text: '入门',
-            items: [
-              { text: '图形绘制', link: '/games/kids/drawing' },
-              { text: '迷宫冒险', link: '/games/kids/adventure' },
-              { text: '图案创作', link: '/games/kids/pattern' },
-              { text: '动画基础', link: '/games/kids/animation' },
-            ]
-          }
-        ]
+        link: '/kids/index.md'
       },
       { text: '博客', link: 'https://blog.funfe.cn' }
     ],
@@ -198,17 +188,7 @@ export default defineConfig({
         },
       ],
       '/games/': [
-        {
-          text: '入门',
-          collapsed: false,
-          items: [
-            { text: '图形绘制', link: '/games/kids/drawing' },
-            { text: '迷宫冒险', link: '/games/kids/adventure' },
-            { text: '图案创作', link: '/games/kids/pattern' },
-            { text: '动画基础', link: '/games/kids/animation' },
-           
-          ]
-        },{
+       {
           text:'小游戏',
           collapsed: false,
           items: [
@@ -218,6 +198,125 @@ export default defineConfig({
             { text: '扫雷', link: '/games/minesweeper' },
             { text: '打砖块', link: '/games/breakout' },
             { text: '数独', link: '/games/sudoku' }
+          ]
+        }
+      ],
+      '/kids/': [
+        {
+          text: '启蒙阶段 (3-6岁)',
+          collapsed: false,
+          items: [
+            {
+              text: '图形认知',
+              link: '/kids/basic/shapes/index',
+              items: [
+                { text: '认识基本图形', link: '/kids/basic/shapes/basic' },
+                { text: '图形组合', link: '/kids/basic/shapes/combine' },
+                { text: '趣味拼图', link: '/kids/basic/shapes/puzzle' }
+              ]
+            },
+            {
+              text: '颜色世界',
+              link: '/kids/basic/colors/index',
+              items: [
+                { text: '基本颜色', link: '/kids/basic/colors/primary' },
+                { text: '颜色混合', link: '/kids/basic/colors/mixing' },
+                { text: '绘画练习', link: '/kids/basic/colors/painting' }
+              ]
+            },
+            {
+              text: '数字游戏',
+              link: '/kids/basic/numbers',
+              items: [
+                { text: '数字认知', link: '/kids/basic/numbers/counting' },
+                { text: '简单计算', link: '/kids/basic/numbers/math' },
+                { text: '数字序列', link: '/kids/basic/numbers/sequence' }
+              ]
+            },
+            {
+              text: '简单动画',
+              link: '/kids/basic/simple-animation',
+              items: [
+                { text: '动画基础', link: '/kids/basic/simple-animation/basics' },
+                { text: '角色动画', link: '/kids/basic/simple-animation/characters' },
+                { text: '场景切换', link: '/kids/basic/simple-animation/scenes' }
+              ]
+            },
+            {
+              text: '趣味编程',
+              link: '/kids/basic/fun-coding',
+              items: [
+                { text: '图形化编程入门', link: '/kids/basic/fun-coding/intro' },
+                { text: '简单指令操作', link: '/kids/basic/fun-coding/commands' },
+                { text: '趣味小项目', link: '/kids/basic/fun-coding/projects' }
+              ]
+            }
+          ]
+        },
+        {
+          text: '基础阶段 (7-9岁)',
+          collapsed: false,
+          items: [
+            {
+              text: '图形绘制',
+              link: '/kids/intermediate/drawing',
+              items: [
+                { text: '基础绘图命令', link: '/kids/intermediate/drawing/commands' },
+                { text: '图案设计', link: '/kids/intermediate/drawing/patterns' },
+                { text: '动画制作', link: '/kids/intermediate/drawing/animation' }
+              ]
+            },
+            {
+              text: '序列与循环',
+              link: '/kids/intermediate/loops',
+              items: [
+                { text: '程序流程', link: '/kids/intermediate/loops/flow' },
+                { text: '循环结构', link: '/kids/intermediate/loops/repeat' },
+                { text: '条件判断', link: '/kids/intermediate/loops/conditions' }
+              ]
+            },
+            {
+              text: '互动故事创作',
+              link: '/kids/intermediate/interactive-stories',
+              items: [
+                { text: '故事构思', link: '/kids/intermediate/interactive-stories/planning' },
+                { text: '场景设计', link: '/kids/intermediate/interactive-stories/scenes' },
+                { text: '交互实现', link: '/kids/intermediate/interactive-stories/interaction' }
+              ]
+            }
+          ]
+        },
+        {
+          text: '进阶阶段 (10-12岁)',
+          collapsed: false,
+          items: [
+            {
+              text: '项目开发',
+              link: '/kids/advanced/projects',
+              items: [
+                { text: '游戏设计', link: '/kids/advanced/projects/games' },
+                { text: '动画制作', link: '/kids/advanced/projects/animations' },
+                { text: '交互应用', link: '/kids/advanced/projects/interactive' }
+              ]
+            },
+            {
+              text: '算法思维',
+              link: '/kids/advanced/algorithms',
+              items: [
+                { text: '基础算法', link: '/kids/advanced/algorithms/basics' },
+                { text: '问题解决', link: '/kids/advanced/algorithms/problem-solving' },
+                { text: '逻辑训练', link: '/kids/advanced/algorithms/logic' }
+              ]
+            },
+            {
+              text: '网页设计基础',
+              link: '/kids/advanced/web-basics',
+              items: [
+                { text: 'HTML基础', link: '/kids/advanced/web-basics/html' },
+                { text: 'CSS入门', link: '/kids/advanced/web-basics/css' },
+                { text: '简单交互', link: '/kids/advanced/web-basics/interaction' }
+              ]
+            }
           ]
         }
       ]
