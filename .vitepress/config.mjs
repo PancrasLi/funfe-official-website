@@ -60,7 +60,9 @@ export default defineConfig({
               { text: '贪吃蛇', link: '/games/snake' },
               { text: '俄罗斯方块', link: '/games/tetris' },
               { text: '2048', link: '/games/2048' },
-              { text: '扫雷', link: '/games/minesweeper' }
+              { text: '扫雷', link: '/games/minesweeper' },
+              { text: '打砖块', link: '/games/breakout' },
+              { text: '数独', link: '/games/sudoku' }
             ]
           },
         ]
@@ -189,7 +191,9 @@ export default defineConfig({
             { text: '贪吃蛇', link: '/games/snake' },
             { text: '俄罗斯方块', link: '/games/tetris' },
             { text: '2048', link: '/games/2048' },
-            { text: '扫雷', link: '/games/minesweeper' }
+            { text: '扫雷', link: '/games/minesweeper' },
+            { text: '打砖块', link: '/games/breakout' },
+            { text: '数独', link: '/games/sudoku' }
           ]
         }
       ]
