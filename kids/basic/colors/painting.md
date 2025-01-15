@@ -11,11 +11,7 @@
 
 ## 有趣的颜色练习
 
-<div class="color-demo">
-  <div class="color-box" style="background-color: red">红色</div>
-  <div class="color-box" style="background-color: yellow">黄色</div>
-  <div class="color-box" style="background-color: blue">蓝色</div>
-</div>
+<ColorDemo />
 
 ### 神奇的调色实验 🌈
 
@@ -24,14 +20,7 @@
 - 蓝色 + 黄色 = 绿色
 - 红色 + 蓝色 = 紫色
 
-<div class="color-mixing">
-  <svg width="300" height="200" viewBox="0 0 300 200">
-    <circle cx="80" cy="80" r="40" fill="red" class="color-circle" />
-    <circle cx="150" cy="80" r="40" fill="yellow" class="color-circle" />
-    <circle cx="220" cy="80" r="40" fill="blue" class="color-circle" />
-    <text x="150" y="160" text-anchor="middle" class="mixing-text">移动鼠标到颜色上试试看！</text>
-  </svg>
-</div>
+<ColorMixing />
 
 ## 简单的绘画步骤
 
