@@ -13,7 +13,19 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#3451b2' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['meta', { name: 'author', content: 'FUNFE' }],
+    ['meta', { name: 'keywords', content: 'JavaScript教程,前端开发,在线工具,编程学习,少儿编程' }],
+    ['meta', { name: 'robots', content: 'index, follow' }],
+    ['meta', { property: 'og:title', content: 'FUNFE - 让代码变得有趣' }],
+    ['meta', { property: 'og:description', content: '让代码变得有趣' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:url', content: 'https://funfe.cn' }],
+    ['meta', { property: 'og:image', content: '/images/logo.svg' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'FUNFE - 让代码变得有趣' }],
+    ['meta', { name: 'twitter:description', content: '让代码变得有趣' }],
+    ['meta', { name: 'twitter:image', content: '/images/logo.svg' }]
   ],
 
   themeConfig: {
@@ -188,6 +200,12 @@ export default defineConfig({
             { text: '迷宫冒险', link: '/games/kids/adventure' },
             { text: '图案创作', link: '/games/kids/pattern' },
             { text: '动画基础', link: '/games/kids/animation' },
+           
+          ]
+        },{
+          text:'小游戏',
+          collapsed: false,
+          items: [
             { text: '贪吃蛇', link: '/games/snake' },
             { text: '俄罗斯方块', link: '/games/tetris' },
             { text: '2048', link: '/games/2048' },
