@@ -158,14 +158,18 @@
 }
 </style>
 
-<script>
-document.querySelectorAll('.color-circle').forEach(circle => {
-  circle.addEventListener('mouseover', () => {
-    circle.style.animation = 'colorPulse 1s infinite';
-  });
-  
-  circle.addEventListener('mouseout', () => {
-    circle.style.animation = '';
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  document.querySelectorAll('.color-circle').forEach(circle => {
+    circle.addEventListener('mouseover', () => {
+      circle.style.animation = 'colorPulse 1s infinite';
+    });
+    
+    circle.addEventListener('mouseout', () => {
+      circle.style.animation = '';
+    });
   });
 });
 </script>

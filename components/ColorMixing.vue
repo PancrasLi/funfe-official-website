@@ -7,10 +7,11 @@
         :cx="circle.cx" 
         :cy="circle.cy" 
         :r="40" 
-        :fill="circle.fill" 
+        :fill="circle.fill"
+        :ref="el => circleRefs[index] = el"
         class="color-circle"
-        @mouseover="startAnimation"
-        @mouseout="stopAnimation"
+        @mouseenter="startAnimation(index)"
+        @mouseleave="stopAnimation(index)"
       />
       <text x="150" y="160" text-anchor="middle" class="mixing-text">
         移动鼠标到颜色上试试看！
@@ -20,18 +21,26 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
 const circles = [
   { cx: 80, cy: 80, fill: 'red' },
   { cx: 150, cy: 80, fill: 'yellow' },
   { cx: 220, cy: 80, fill: 'blue' }
 ]
 
-const startAnimation = (event) => {
-  event.target.style.animation = 'colorPulse 1s infinite'
+const circleRefs = ref([])
+
+const startAnimation = (index) => {
+  if (circleRefs.value[index]) {
+    circleRefs.value[index].style.animation = 'colorPulse 1s infinite'
+  }
 }
 
-const stopAnimation = (event) => {
-  event.target.style.animation = ''
+const stopAnimation = (index) => {
+  if (circleRefs.value[index]) {
+    circleRefs.value[index].style.animation = ''
+  }
 }
 </script>
 
