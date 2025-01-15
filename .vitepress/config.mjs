@@ -52,6 +52,20 @@ export default defineConfig({
         ]
       },
       {
+        text: '休闲一下',
+        items: [
+          {
+            text: '小游戏',
+            items: [
+              { text: '贪吃蛇', link: '/games/snake' },
+              { text: '俄罗斯方块', link: '/games/tetris' },
+              { text: '2048', link: '/games/2048' },
+              { text: '扫雷', link: '/games/minesweeper' }
+            ]
+          },
+        ]
+      },
+      {
         text: '少儿编程',
         items: [
           {
@@ -172,6 +186,10 @@ export default defineConfig({
             { text: '迷宫冒险', link: '/games/kids/adventure' },
             { text: '图案创作', link: '/games/kids/pattern' },
             { text: '动画基础', link: '/games/kids/animation' },
+            { text: '贪吃蛇', link: '/games/snake' },
+            { text: '俄罗斯方块', link: '/games/tetris' },
+            { text: '2048', link: '/games/2048' },
+            { text: '扫雷', link: '/games/minesweeper' }
           ]
         }
       ]
