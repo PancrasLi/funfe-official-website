@@ -226,7 +226,7 @@ export default defineConfig({
             },
             {
               text: '数字游戏',
-              link: '/kids/basic/numbers',
+              link: '/kids/basic/numbers/index',
               items: [
                 { text: '数字认知', link: '/kids/basic/numbers/counting' },
                 { text: '简单计算', link: '/kids/basic/numbers/math' },
