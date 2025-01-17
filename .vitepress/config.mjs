@@ -235,7 +235,7 @@ export default defineConfig({
             },
             {
               text: '简单动画',
-              link: '/kids/basic/simple-animation',
+              link: '/kids/basic/simple-animation/index',
               items: [
                 { text: '动画基础', link: '/kids/basic/simple-animation/basics' },
                 { text: '角色动画', link: '/kids/basic/simple-animation/characters' },
