@@ -1,4 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
+import './custom.css'
 import ColorDemo from '../../components/ColorDemo.vue'
 import ColorMixing from '../../components/ColorMixing.vue'
 

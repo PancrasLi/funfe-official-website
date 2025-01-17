@@ -42,6 +42,11 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: 'javascript学习记录', link: '/class/js/index.md' },
       {
+        text: '问AI',
+        link: 'https://yuanbao.tencent.com/chat/SdEAG1rI5fAw',
+        class: 'nav-ai-link'
+      },
+      {
         text: '在线工具',
         items: [
           {

@@ -36,6 +36,12 @@ features:
     title: 分享交流
     details: 乐于分享技术经验，建立良好的技术社区氛围，共同成长进步
 ---
+<div class="ai-float-button" @click="goToAI">
+  <div class="ai-icon">🤖</div>
+  <div class="ai-text">问AI</div>
+  <div class="ai-ripple"></div>
+</div>
+
 <script setup>
 import { onMounted, onUnmounted, ref, watch, nextTick } from 'vue'
 import { useRoute } from 'vitepress'
@@ -268,6 +274,11 @@ function onWindowResize() {
   camera.updateProjectionMatrix()
   renderer.setSize(width, height)
 }
+
+// 添加 AI 按钮点击处理函数
+function goToAI() {
+  window.location.href = 'https://yuanqi.tencent.com/agent/qglkL1xeLmhh'
+}
 </script>
 
 <style>
@@ -381,5 +392,91 @@ function onWindowResize() {
   :global(.VPFeatures .item) {
     -webkit-backdrop-filter: blur(10px);
   }
+}
+
+/* AI悬浮按钮样式 */
+.ai-float-button {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #3451b2, #42b883);
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 81, 178, 0.2);
+}
+
+.ai-float-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(52, 81, 178, 0.3);
+}
+
+.ai-icon {
+  font-size: 24px;
+  margin-right: 8px;
+  animation: bounce 2s infinite;
+}
+
+.ai-text {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.ai-ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1);
+  animation: ripple 2s infinite;
+}
+
+/* 动画关键帧 */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+  .ai-float-button {
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 20px;
+  }
+  
+  .ai-icon {
+    font-size: 20px;
+  }
+  
+  .ai-text {
+    font-size: 14px;
+  }
+}
+
+/* 暗色模式适配 */
+:global(html.dark) .ai-float-button {
+  background: linear-gradient(135deg, #4a5bb9, #45d390);
+  box-shadow: 0 4px 15px rgba(74, 91, 185, 0.3);
 }
 </style>
