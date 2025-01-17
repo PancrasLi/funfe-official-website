@@ -244,7 +244,7 @@ export default defineConfig({
             },
             {
               text: '趣味编程',
-              link: '/kids/basic/fun-coding',
+              link: '/kids/basic/fun-coding/index',
               items: [
                 { text: '图形化编程入门', link: '/kids/basic/fun-coding/intro' },
                 { text: '简单指令操作', link: '/kids/basic/fun-coding/commands' },
