@@ -264,7 +264,7 @@ export default defineConfig({
           items: [
             {
               text: '图形绘制',
-              link: '/kids/intermediate/drawing',
+              link: '/kids/intermediate/drawing/index',
               items: [
                 { text: '基础绘图命令', link: '/kids/intermediate/drawing/commands' },
                 { text: '图案设计', link: '/kids/intermediate/drawing/patterns' },
