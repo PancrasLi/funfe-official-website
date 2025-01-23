@@ -244,3 +244,14 @@
   }
 }
 
+/* Hide footer on playground page */
+html.hide-footer .VPFooter {
+  display: none !important;
+}
+
+/* Adjust main content height when footer is hidden */
+html.hide-footer .VPContent {
+  padding-bottom: 0 !important;
+  min-height: calc(100vh - var(--vp-nav-height)) !important;
+}
+

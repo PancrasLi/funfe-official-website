@@ -15,7 +15,7 @@ hero:
       link: /about/index.md
     - theme: alt
       text: 在线编辑器
-      link: /playground
+      link: /playground/index.md
   image:
     src: /images/logo.svg
     

@@ -31,7 +31,13 @@ export default defineConfig({
       src: 'https://cdn.counter.dev/script.js',
       'data-id': 'e5e1bf1c-e339-41ba-8502-dd9b7815447d',
       'data-utcoffset': '8'
-    }]
+    }],
+    // 添加 Blockly 库
+    ['script', { src: 'https://unpkg.com/blockly/blockly.min.js' }],
+    // 添加 Blockly 中文语言包
+    ['script', { src: 'https://unpkg.com/blockly/msg/zh-hans.js' }],
+    // 添加 Monaco Editor
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js' }]
   ],
 
   themeConfig: {
@@ -392,6 +398,9 @@ export default defineConfig({
   vite: {
     optimizeDeps: {
       include: ['three']
+    },
+    ssr: {
+      noExternal: ['monaco-editor']
     }
   }
 })
