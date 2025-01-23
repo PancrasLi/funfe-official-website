@@ -424,15 +424,7 @@ export default defineConfig({
       noExternal: ['monaco-editor']
     },
     build: {
-      chunkSizeWarningLimit: 1000, // 增加代码分割警告限制
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            'vitepress': ['vitepress'],
-            'vendor': ['three', 'monaco-editor']
-          }
-        }
-      }
+      chunkSizeWarningLimit: 1000 // 增加代码分割警告限制
     }
   },
   sitemap: {
