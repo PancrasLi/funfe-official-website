@@ -428,8 +428,8 @@ export default defineConfig({
       rollupOptions: {
         output: {
           manualChunks: {
-            'vue': ['vue'],
-            'vitepress': ['vitepress']
+            'vitepress': ['vitepress'],
+            'vendor': ['three', 'monaco-editor']
           }
         }
       }
