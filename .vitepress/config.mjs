@@ -4,40 +4,60 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "FUNFE",
-  description: "让代码变得有趣",
+  description: "专注前端技术分享与少儿编程教育的在线学习平台，提供JavaScript教程、Vue开发、图形化编程等优质内容，以及Base64转换、URL编解码、JSON格式化等实用在线工具",
   lang: 'zh-CN',
   base: '/',
   lastUpdated: true,
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'canonical', href: 'https://funfe.cn' }],
     ['meta', { name: 'theme-color', content: '#3451b2' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['meta', { name: 'author', content: 'FUNFE' }],
-    ['meta', { name: 'keywords', content: 'JavaScript教程,前端开发,在线工具,编程学习,少儿编程' }],
+    ['meta', { name: 'format-detection', content: 'telephone=no,email=no' }],
+    ['meta', { name: 'author', content: 'FUNFE Team' }],
+    ['meta', { name: 'keywords', content: 'JavaScript教程,Vue3教程,前端开发,少儿编程,图形化编程,Scratch教程,Web开发,前端框架,编程思维,项目实战,Base64转换器,URL编解码工具,JSON格式化工具,HTML实体转换,图片转Base64,在线调色板,颜色转换器,渐变生成器' }],
+    ['meta', { name: 'description', content: '专注前端技术分享与少儿编程教育的在线学习平台，提供JavaScript教程、Vue开发、图形化编程等优质内容，以及Base64转换、URL编解码、JSON格式化等实用在线工具' }],
     ['meta', { name: 'robots', content: 'index, follow' }],
-    ['meta', { property: 'og:title', content: 'FUNFE - 让代码变得有趣' }],
-    ['meta', { property: 'og:description', content: '让代码变得有趣' }],
+    ['meta', { name: 'googlebot', content: 'index, follow' }],
+    ['meta', { name: 'baidu-site-verification', content: '' }], // 百度站长验证，需要填入验证码
+    ['meta', { name: 'google-site-verification', content: '' }], // Google站长验证，需要填入验证码
+    
+    // Open Graph tags for social media
+    ['meta', { property: 'og:title', content: 'FUNFE - 探索前端技术，启发编程思维 | 在线工具集' }],
+    ['meta', { property: 'og:description', content: '专注前端技术分享与少儿编程教育的在线学习平台，提供JavaScript教程、Vue开发、图形化编程等优质内容，以及Base64转换、URL编解码、JSON格式化等实用在线工具' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:url', content: 'https://funfe.cn' }],
-    ['meta', { property: 'og:image', content: '/images/logo.svg' }],
+    ['meta', { property: 'og:image', content: 'https://funfe.cn/images/og-image.jpg' }],
+    ['meta', { property: 'og:site_name', content: 'FUNFE' }],
+    ['meta', { property: 'og:locale', content: 'zh_CN' }],
+    
+    // Twitter Card tags
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: 'FUNFE - 让代码变得有趣' }],
-    ['meta', { name: 'twitter:description', content: '让代码变得有趣' }],
-    ['meta', { name: 'twitter:image', content: '/images/logo.svg' }],
+    ['meta', { name: 'twitter:site', content: '@funfe_cn' }],
+    ['meta', { name: 'twitter:creator', content: '@funfe_cn' }],
+    ['meta', { name: 'twitter:title', content: 'FUNFE - 探索前端技术，启发编程思维 | 在线工具集' }],
+    ['meta', { name: 'twitter:description', content: '专注前端技术分享与少儿编程教育的在线学习平台，提供JavaScript教程、Vue开发、图形化编程等优质内容，以及Base64转换、URL编解码、JSON格式化等实用在线工具' }],
+    ['meta', { name: 'twitter:image', content: 'https://funfe.cn/images/twitter-card.jpg' }],
+    
+    // PWA tags
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { name: 'application-name', content: 'FUNFE' }],
+    ['meta', { name: 'apple-mobile-web-app-title', content: 'FUNFE' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/icons/apple-touch-icon.png' }],
+    ['link', { rel: 'mask-icon', href: '/images/icons/safari-pinned-tab.svg', color: '#3451b2' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#3451b2' }],
+    ['meta', { name: 'msapplication-config', content: '/browserconfig.xml' }],
+
+    // Analytics
     ['script', {
       async: true,
       src: 'https://cdn.counter.dev/script.js',
       'data-id': 'e5e1bf1c-e339-41ba-8502-dd9b7815447d',
       'data-utcoffset': '8'
     }],
-    // 添加 Blockly 库
-    ['script', { src: 'https://unpkg.com/blockly/blockly.min.js' }],
-    // 添加 Blockly 中文语言包
-    ['script', { src: 'https://unpkg.com/blockly/msg/zh-hans.js' }],
-    // 添加 Monaco Editor
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js' }]
+   
   ],
 
   themeConfig: {
@@ -46,12 +66,8 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      { text: 'javascript学习记录', link: '/class/js/index.md' },
-      {
-        text: '问AI',
-        link: 'https://yuanbao.tencent.com/chat/SdEAG1rI5fAw',
-        class: 'nav-ai-link'
-      },
+      { text: 'JS学习记录', link: '/class/js/index.md' },
+     
       {
         text: '在线工具',
         items: [
@@ -99,6 +115,11 @@ export default defineConfig({
       {
         text: '少儿编程',
         link: '/kids/index.md'
+      },
+      {
+        text: '问AI',
+        link: 'https://yuanbao.tencent.com/chat/SdEAG1rI5fAw',
+        class: 'nav-ai-link'
       },
       { text: '博客', link: 'https://blog.funfe.cn' }
     ],
@@ -401,6 +422,31 @@ export default defineConfig({
     },
     ssr: {
       noExternal: ['monaco-editor']
+    },
+    build: {
+      chunkSizeWarningLimit: 1000, // 增加代码分割警告限制
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vue': ['vue'],
+            'vitepress': ['vitepress']
+          }
+        }
+      }
+    }
+  },
+  sitemap: {
+    hostname: 'https://funfe.cn',
+    changefreq: 'weekly'
+  },
+  markdown: {
+    headers: {
+      level: [0, 0] // 不自动生成标题链接
+    },
+    // 自动为外部链接添加 target="_blank" 和 rel="noopener noreferrer"
+    externalLinks: {
+      target: '_blank',
+      rel: 'noopener noreferrer'
     }
   }
 })

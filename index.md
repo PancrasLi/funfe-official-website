@@ -7,394 +7,178 @@ class: home-page
 
 hero:
   name: "FUNFE"
-  text: "让代码变得有趣"
-  tagline: Coding is Fun 
+  text: "探索前端技术，启发编程思维"
+  tagline: Explore Frontend & Develop Computational Thinking
   actions:
     - theme: brand
-      text: 关于本站
-      link: /about/index.md
-    - theme: alt
-      text: 在线编辑器
+      text: 图形编辑器
       link: /playground/index.md
+    - theme: alt
+      text: JS学习记录
+      link: /class/js/1.md
+    - theme: alt
+      text: 少儿编程课程体系
+      link: /kids/index
   image:
     src: /images/logo.svg
     
 features:
-  - icon: 
-      dark: /icons/learn-dark.svg
-      light: /icons/learn-light.svg
-    title: 持续学习
-    details: 保持对技术的热情与好奇，不断探索新的知识领域，让学习成为习惯
-  - icon:
-      dark: /icons/code-dark.svg
-      light: /icons/code-light.svg
-    title: 热爱编程
-    details: 享受编程带来的乐趣，用代码创造价值，让工作充满激情
-  - icon:
-      dark: /icons/share-dark.svg
-      light: /icons/share-light.svg
-    title: 分享交流
-    details: 乐于分享技术经验，建立良好的技术社区氛围，共同成长进步
+  - icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20.59 12l-3.3-3.3a1 1 0 1 1 1.42-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.42-1.4l3.3-3.3zM3.4 12l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4a1 1 0 0 1 0-1.4l4-4a1 1 0 0 1 1.42 1.4L3.4 12zm7.56 8.24a1 1 0 0 1-1.94-.48l4-16a1 1 0 1 1 1.94.48l-4 16z"/></svg>
+    title: 前端开发
+    details: 系统学习 HTML、CSS、JavaScript 等前端技术，掌握现代化开发工具和框架
+  - icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 2c-5.621 0-10.211 4.443-10.475 10h-3.025l5 6.625 5-6.625h-2.975c.257-3.351 3.06-6 6.475-6 3.584 0 6.5 2.916 6.5 6.5s-2.916 6.5-6.5 6.5c-1.863 0-3.542-.793-4.728-2.053l-2.427 3.216c1.877 1.754 4.389 2.837 7.155 2.837 5.79 0 10.5-4.71 10.5-10.5s-4.71-10.5-10.5-10.5z"/></svg>
+    title: 可视化编程
+    details: 通过图形化界面学习编程概念，培养逻辑思维和创造力
+  - icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5L9.99 9.99L6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1s-1.1-.49-1.1-1.1s.49-1.1 1.1-1.1z"/></svg>
+    title: 项目实战
+    details: 结合前端技术开发游戏和动画，在实践中提升编程能力
+  - icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M17 22v-2h3v-3h2v3.5c0 .83-.67 1.5-1.5 1.5H17zm-2-22h2v9h-2V0zm-4 0h2v7h-2V0zm-4 0h2v5H7V0zM2 22v-3.5C2 16.67 2.67 16 3.5 16H7v2H4v3H2zm3.5-7C3.67 15 2 13.33 2 11.5V9h2v2.5c0 .83.67 1.5 1.5 1.5H7v2H5.5zm11 0c-.83 0-1.5-.67-1.5-1.5V9h2v2.5c0 .83-.67 1.5-1.5 1.5zM9 9h6v2H9V9zm2 4h2v11h-2V13z"/></svg>
+    title: 算法思维
+    details: 学习基础算法和数据结构，提升解决问题的能力
+  - icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 23C6.443 23 2 18.557 2 13c0-5.557 4.443-10 10-10s10 4.443 10 10c0 5.557-4.443 10-10 10zm0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16zm0-3a5 5 0 1 1 0-10a5 5 0 0 1 0 10z"/></svg>
+    title: UI设计
+    details: 了解界面设计原则，提升产品美感和用户体验
+  - icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93c0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41c0 2.08-.8 3.97-2.1 5.39z"/></svg>
+    title: 开源社区
+    details: 参与开源项目，培养协作精神和工程实践能力
 ---
-<div class="ai-float-button" @click="goToAI">
-  <div class="ai-icon">🤖</div>
-  <div class="ai-text">问AI</div>
-  <div class="ai-ripple"></div>
-</div>
+
+  <div class="home-container">
+    <div class="ai-float-button" @click="goToAI">
+      <div class="ai-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21.928 11.607c-.202-.488-.635-.605-.928-.633V8c0-1.103-.897-2-2-2h-6V4.61c.305-.274.5-.668.5-1.11a1.5 1.5 0 0 0-3 0c0 .442.195.836.5 1.11V6H5c-1.103 0-2 .897-2 2v2.997l-.082.006A1 1 0 0 0 1.99 12v2a1 1 0 0 0 1 1H3v5c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5a1 1 0 0 0 1-1v-1.938a1.006 1.006 0 0 0-.072-.455zM5 20V8h14l.001 3.996L19 12v2l.001.005L19 20H5z"/><path fill="currentColor" d="M12 10.5c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5s3.5-1.57 3.5-3.5s-1.57-3.5-3.5-3.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5s1.5.673 1.5 1.5s-.673 1.5-1.5 1.5zm-4-2.5H6v-2h2v2zm8 0h2v-2h-2v2z"/></svg>
+      </div>
+      <span class="ai-text">问AI</span>
+      <div class="ai-ripple"></div><div class="ai-glow"></div></div></div>
 
 <script setup>
-import { onMounted, onUnmounted, ref, watch, nextTick } from 'vue'
-import { useRoute } from 'vitepress'
-import * as THREE from 'three'
+import { onMounted } from 'vue'
 
-const route = useRoute()
-let renderer, scene, camera
-let particles, particlePositions, linesMesh
-const particlesData = []
-const isDarkMode = ref(document.documentElement.classList.contains('dark'))
-const PARTICLE_COUNT = 50
-const PARTICLE_DISTANCE = 80
-const PARTICLE_SIZE = 0.8
-const CONNECTION_DISTANCE = 30
-const MIN_LINE_OPACITY = 0.1
-
-watch(() => route.path, (newPath) => {
-  if (newPath === '/') {
-    nextTick(() => {
-      initAnimation()
-    })
-  }
-})
-
-onMounted(() => {
-  nextTick(() => {
-    initAnimation()
-  })
-  
-  const observer = new MutationObserver(() => {
-    isDarkMode.value = document.documentElement.classList.contains('dark')
-    updateColors()
-  })
-  observer.observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ['class']
-  })
-})
-
-onUnmounted(() => {
-  cleanup()
-})
-
-function cleanup() {
-  if (renderer) {
-    renderer.dispose()
-    scene?.clear()
-    particles = null
-    linesMesh = null
-    
-    const canvas = document.querySelector('#funfe-animation-canvas')
-    canvas?.remove()
-  }
-  window.removeEventListener('resize', onWindowResize)
-}
-
-function initAnimation() {
-  cleanup()
-  const container = document.querySelector('.VPHero')
-  if (!container) return
-
-  scene = new THREE.Scene()
-  camera = new THREE.PerspectiveCamera(75, 1, 1, 1000)
-  camera.position.z = 100
-
-  renderer = new THREE.WebGLRenderer({
-    alpha: true,
-    antialias: true
-  })
-  
-  const width = window.innerWidth > 960 ? window.innerWidth / 2 : window.innerWidth
-  const height = window.innerWidth > 960 ? container.offsetHeight : container.offsetHeight / 2
-  
-  renderer.setPixelRatio(window.devicePixelRatio)
-  renderer.setSize(width, height)
-  renderer.domElement.id = 'funfe-animation-canvas'
-  container.appendChild(renderer.domElement)
-
-  createParticles()
-  animate()
-  window.addEventListener('resize', onWindowResize)
-}
-
-function createParticles() {
-  const positions = new Float32Array(PARTICLE_COUNT * 3)
-  const colors = new Float32Array(PARTICLE_COUNT * 3)
-  const sizes = new Float32Array(PARTICLE_COUNT)
-
-  const geometry = new THREE.BufferGeometry()
-  const material = new THREE.PointsMaterial({
-    size: PARTICLE_SIZE,
-    sizeAttenuation: true,
-    vertexColors: true,
-    transparent: true,
-    opacity: 0.9
-  })
-
-  // 创建粒子
-  for (let i = 0; i < PARTICLE_COUNT; i++) {
-    particlesData.push({
-      velocity: new THREE.Vector3(
-        (-0.5 + Math.random()) * 0.5,
-        (-0.5 + Math.random()) * 0.5,
-        (-0.5 + Math.random()) * 0.5
-      ),
-      numConnections: 0
-    })
-
-    const x = Math.random() * PARTICLE_DISTANCE - PARTICLE_DISTANCE/2
-    const y = Math.random() * PARTICLE_DISTANCE - PARTICLE_DISTANCE/2
-    const z = Math.random() * PARTICLE_DISTANCE - PARTICLE_DISTANCE/2
-
-    positions[i * 3] = x
-    positions[i * 3 + 1] = y
-    positions[i * 3 + 2] = z
-
-    const color = isDarkMode.value ? 
-      new THREE.Color(0x4ecdc4).multiplyScalar(Math.random() * 0.3 + 0.7) :
-      new THREE.Color(0x2ecc71).multiplyScalar(Math.random() * 0.3 + 0.7)
-
-    colors[i * 3] = color.r
-    colors[i * 3 + 1] = color.g
-    colors[i * 3 + 2] = color.b
-
-    sizes[i] = PARTICLE_SIZE * (Math.random() * 0.5 + 0.75)
-  }
-
-  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
-  geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
-  geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1))
-
-  particles = new THREE.Points(geometry, material)
-  scene.add(particles)
-
-  // 创建连线 - 调整线条材质
-  const linesGeometry = new THREE.BufferGeometry()
-  const linesMaterial = new THREE.LineBasicMaterial({
-    vertexColors: true,
-    transparent: true,
-    opacity: 0.15
-  })
-
-  // 使用不同的变量名
-  const linesPositions = new Float32Array(PARTICLE_COUNT * PARTICLE_COUNT * 3)
-  const linesColors = new Float32Array(PARTICLE_COUNT * PARTICLE_COUNT * 3)
-  
-  linesGeometry.setAttribute('position', new THREE.BufferAttribute(linesPositions, 3))
-  linesGeometry.setAttribute('color', new THREE.BufferAttribute(linesColors, 3))
-
-  linesMesh = new THREE.LineSegments(linesGeometry, linesMaterial)
-  scene.add(linesMesh)
-}
-
-function animate() {
-  requestAnimationFrame(animate)
-
-  const time = Date.now() * 0.001
-  const positions = particles.geometry.attributes.position.array
-  const linePositions = linesMesh.geometry.attributes.position.array
-  const lineColors = linesMesh.geometry.attributes.color.array
-  let vertexpos = 0
-  let colorpos = 0
-  let numConnected = 0
-
-  for (let i = 0; i < PARTICLE_COUNT; i++) {
-    const particleData = particlesData[i]
-
-    // 更新粒子位置
-    positions[i * 3] += particleData.velocity.x * 0.1
-    positions[i * 3 + 1] += particleData.velocity.y * 0.1
-    positions[i * 3 + 2] += particleData.velocity.z * 0.1
-
-    // 边界检查
-    if (positions[i * 3] < -PARTICLE_DISTANCE/2 || positions[i * 3] > PARTICLE_DISTANCE/2) 
-      particleData.velocity.x *= -1
-    if (positions[i * 3 + 1] < -PARTICLE_DISTANCE/2 || positions[i * 3 + 1] > PARTICLE_DISTANCE/2) 
-      particleData.velocity.y *= -1
-    if (positions[i * 3 + 2] < -PARTICLE_DISTANCE/2 || positions[i * 3 + 2] > PARTICLE_DISTANCE/2) 
-      particleData.velocity.z *= -1
-
-    // 创建连线 - 优化连线逻辑
-    for (let j = i + 1; j < PARTICLE_COUNT; j++) {
-      const dx = positions[i * 3] - positions[j * 3]
-      const dy = positions[i * 3 + 1] - positions[j * 3 + 1]
-      const dz = positions[i * 3 + 2] - positions[j * 3 + 2]
-      const dist = Math.sqrt(dx * dx + dy * dy + dz * dz)
-
-      if (dist < CONNECTION_DISTANCE) {
-        linePositions[vertexpos++] = positions[i * 3]
-        linePositions[vertexpos++] = positions[i * 3 + 1]
-        linePositions[vertexpos++] = positions[i * 3 + 2]
-        linePositions[vertexpos++] = positions[j * 3]
-        linePositions[vertexpos++] = positions[j * 3 + 1]
-        linePositions[vertexpos++] = positions[j * 3 + 2]
-
-        // 优化透明度计算
-        const alpha = Math.max(MIN_LINE_OPACITY, 1.0 - (dist / CONNECTION_DISTANCE))
-        const color = isDarkMode.value ? 
-          new THREE.Color(0x4ecdc4).multiplyScalar(alpha * 0.8) :
-          new THREE.Color(0x2ecc71).multiplyScalar(alpha * 0.8)
-
-        lineColors[colorpos++] = color.r
-        lineColors[colorpos++] = color.g
-        lineColors[colorpos++] = color.b
-        lineColors[colorpos++] = color.r
-        lineColors[colorpos++] = color.g
-        lineColors[colorpos++] = color.b
-
-        numConnected++
-      }
-    }
-  }
-
-  linesMesh.geometry.setDrawRange(0, numConnected * 2)
-  particles.geometry.attributes.position.needsUpdate = true
-  linesMesh.geometry.attributes.position.needsUpdate = true
-  linesMesh.geometry.attributes.color.needsUpdate = true
-
-  renderer.render(scene, camera)
-}
-
-function onWindowResize() {
-  const container = document.querySelector('.VPHero')
-  if (!container) return
-
-  const width = window.innerWidth > 960 ? window.innerWidth / 2 : window.innerWidth
-  const height = window.innerWidth > 960 ? container.offsetHeight : container.offsetHeight / 2
-
-  camera.aspect = width / height
-  camera.updateProjectionMatrix()
-  renderer.setSize(width, height)
-}
-
-// 添加 AI 按钮点击处理函数
 function goToAI() {
-  window.location.href = 'https://yuanqi.tencent.com/agent/qglkL1xeLmhh'
+  window.location.href = 'https://yuanbao.tencent.com/chat/SdEAG1rI5fAw'
 }
 </script>
 
 <style>
-/* 保持原有的 canvas 样式 */
-#funfe-animation-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
+/* 容器样式 */
+.home-container {
+  position: relative;
   width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
+  overflow: hidden;
 }
 
-/* 暗色模式背景 */
-:global(html.dark) #funfe-animation-canvas {
-  background: linear-gradient(to bottom, 
-    rgba(13, 13, 25, 0.9) 0%,
-    rgba(24, 24, 45, 0.9) 50%,
-    rgba(43, 43, 78, 0.9) 100%
-  );
+/* 调整 VPHero 的样式 */
+:global(.VPHero) {
+  position: relative;
+  z-index: 2;
 }
 
-/* 亮色模式背景 */
-:global(html:not(.dark)) #funfe-animation-canvas {
-  background: linear-gradient(to bottom, 
-    rgba(245, 247, 250, 0.9) 0%,
-    rgba(235, 240, 245, 0.9) 50%,
-    rgba(230, 235, 240, 0.9) 100%
-  );
-}
-
-/* Features 区域样式优化 */
+/* 调整 Features 的样式 */
 :global(.VPFeatures) {
   position: relative;
-  z-index: 1;
-  margin-top: 3rem !important;
+  z-index: 2;
+  background: transparent !important;
 }
 
-:global(.VPFeatures .container) {
-  background: transparent !important;
-  padding: 0 2rem;
+/* 确保内容在动画上层 */
+:global(.VPContent) {
+  position: relative;
+  z-index: 2;
 }
 
-:global(.VPFeatures .item) {
-  background: transparent !important;
-  border-radius: 12px;
+/* 学习路线样式 */
+.learning-path {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: var(--vp-c-bg);
+}
+
+.learning-path h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, var(--vp-c-brand), var(--vp-c-brand-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.path-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.path-item {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  padding: 2rem;
+  background: var(--vp-c-bg-soft);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  border: 1px solid var(--vp-c-divider);
 }
 
-/* 暗色模式下的 Features 样式 */
-:global(html.dark .VPFeatures .item) {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-:global(html.dark .VPFeatures .item:hover) {
-  border-color: rgba(255, 255, 255, 0.2);
+.path-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--vp-c-brand);
 }
 
-/* 亮色模式下的 Features 样式 */
-:global(html:not(.dark) .VPFeatures .item) {
-  border: 1px solid rgba(60, 60, 60, 0.12);
+.path-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
 }
 
-:global(html:not(.dark) .VPFeatures .item:hover) {
-  background: rgba(255, 255, 255, 0.35) !important;
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+.path-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--vp-c-brand);
 }
 
-/* Features 内容样式优化 */
-:global(.VPFeatures .details) {
-  padding: 1.5rem !important;
+.path-item p {
+  color: var(--vp-c-text-2);
   line-height: 1.6;
 }
 
-:global(.VPFeatures .title) {
-  font-size: 1.25rem !important;
-  margin-bottom: 0.75rem !important;
-  font-weight: 600;
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Features 样式优化 */
+:global(.VPFeatures .item) {
+  background: var(--vp-c-bg-soft) !important;
+  border-radius: 16px !important;
+  padding: 2rem !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid var(--vp-c-divider);
+}
+
+:global(.VPFeatures .item:hover) {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1) !important;
+  border-color: var(--vp-c-brand);
 }
 
 :global(.VPFeatures .icon) {
-  margin-bottom: 1rem;
-  transition: transform 0.3s ease;
+  font-size: 2.5rem !important;
+  margin-bottom: 1.5rem !important;
+  animation: wiggle 3s ease-in-out infinite;
 }
 
-:global(.VPFeatures .item:hover .icon) {
-  transform: scale(1.1);
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
 }
 
-/* 响应式优化 */
-@media (max-width: 768px) {
-  :global(.VPFeatures .container) {
-    padding: 1rem;
-  }
-  
-  :global(.VPFeatures .item) {
-    margin: 0.5rem 0;
-  }
-  
-  :global(.VPFeatures .details) {
-    padding: 1rem !important;
-  }
-}
-
-/* 确保毛玻璃效果在 Safari 上也能工作 */
-@supports (-webkit-backdrop-filter: none) {
-  :global(.VPFeatures .container),
-  :global(.VPFeatures .item) {
-    -webkit-backdrop-filter: blur(10px);
-  }
-}
-
-/* AI悬浮按钮样式 */
+/* AI 按钮样式升级 */
 .ai-float-button {
   position: fixed;
   right: 40px;
@@ -402,63 +186,97 @@ function goToAI() {
   display: flex;
   align-items: center;
   padding: 12px 24px;
-  background: linear-gradient(135deg, #3451b2, #42b883);
+  background: var(--vp-c-bg-soft);
   border-radius: 30px;
   cursor: pointer;
   z-index: 100;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(52, 81, 178, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(52, 81, 178, 0.1);
+  border: 1px solid var(--vp-c-divider);
+  overflow: hidden;
 }
 
 .ai-float-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(52, 81, 178, 0.3);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(52, 81, 178, 0.2);
+  border-color: var(--vp-c-brand);
 }
 
 .ai-icon {
+  position: relative;
   font-size: 24px;
   margin-right: 8px;
-  animation: bounce 2s infinite;
+  color: var(--vp-c-text-1);
+  animation: pulse 2s infinite;
 }
 
 .ai-text {
-  color: white;
-  font-weight: 600;
+  color: var(--vp-c-text-1);
   font-size: 16px;
-  letter-spacing: 1px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .ai-ripple {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.1);
-  transform: scale(1);
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: var(--vp-c-brand);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
   animation: ripple 2s infinite;
 }
 
-/* 动画关键帧 */
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+.ai-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--vp-c-brand-dimm) 0%, transparent 70%);
+  animation: glow 3s infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes ripple {
   0% {
-    transform: scale(1);
-    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
   }
   100% {
-    transform: scale(1.5);
+    transform: translate(-50%, -50%) scale(20);
     opacity: 0;
   }
 }
 
-/* 响应式适配 */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glow {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* 响应式优化 */
 @media (max-width: 768px) {
+  .learning-path {
+    padding: 2rem 1rem;
+  }
+  
+  .path-item {
+    min-width: 200px;
+    padding: 1.5rem;
+  }
+  
   .ai-float-button {
     right: 20px;
     bottom: 20px;
@@ -475,8 +293,63 @@ function goToAI() {
 }
 
 /* 暗色模式适配 */
+:global(html.dark) .path-item {
+  background: var(--vp-c-bg-soft);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+:global(html.dark) .path-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
 :global(html.dark) .ai-float-button {
-  background: linear-gradient(135deg, #4a5bb9, #45d390);
-  box-shadow: 0 4px 15px rgba(74, 91, 185, 0.3);
+  background: var(--vp-c-bg-soft);
+  border-color: var(--vp-c-divider);
+}
+
+:global(html.dark) .ai-float-button:hover {
+  border-color: var(--vp-c-brand);
+}
+
+/* 优化 SVG 图标样式 */
+:global(.VPFeatures .icon svg) {
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+:global(.VPFeatures .item:hover .icon svg) {
+  transform: scale(1.1);
+  color: var(--vp-c-brand);
+}
+
+.path-icon svg {
+  width: 40px;
+  height: 40px;
+  color: var(--vp-c-brand);
+  transition: all 0.3s ease;
+}
+
+.path-item:hover .path-icon svg {
+  transform: scale(1.1);
+}
+
+/* 优化特性卡片样式 */
+:global(.VPFeatures .item) {
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft) !important;
+}
+
+:global(.VPFeatures .item:hover) {
+  border-color: var(--vp-c-brand);
+}
+
+/* 优化路径卡片样式 */
+.path-item {
+  border: 1px solid var(--vp-c-divider);
+}
+
+.path-item:hover {
+  border-color: var(--vp-c-brand);
 }
 </style>
