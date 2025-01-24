@@ -43,21 +43,68 @@ features:
     details: 参与开源项目，培养协作精神和工程实践能力
 ---
 
-  <div class="home-container">
-    <div class="ai-float-button" @click="goToAI">
-      <div class="ai-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21.928 11.607c-.202-.488-.635-.605-.928-.633V8c0-1.103-.897-2-2-2h-6V4.61c.305-.274.5-.668.5-1.11a1.5 1.5 0 0 0-3 0c0 .442.195.836.5 1.11V6H5c-1.103 0-2 .897-2 2v2.997l-.082.006A1 1 0 0 0 1.99 12v2a1 1 0 0 0 1 1H3v5c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5a1 1 0 0 0 1-1v-1.938a1.006 1.006 0 0 0-.072-.455zM5 20V8h14l.001 3.996L19 12v2l.001.005L19 20H5z"/><path fill="currentColor" d="M12 10.5c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5s3.5-1.57 3.5-3.5s-1.57-3.5-3.5-3.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5s1.5.673 1.5 1.5s-.673 1.5-1.5 1.5zm-4-2.5H6v-2h2v2zm8 0h2v-2h-2v2z"/></svg>
-      </div>
-      <span class="ai-text">问AI</span>
-      <div class="ai-ripple"></div><div class="ai-glow"></div></div></div>
 
 <script setup>
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 
+const springFestivalEnabled = ref(false)
+
+onMounted(() => {
+  // 检查本地存储的主题设置
+  const enabled = localStorage.getItem('spring-festival-theme') === 'true'
+  springFestivalEnabled.value = enabled
+  updateTheme(enabled)
+})
+
+// 更新主题
+const updateTheme = (enabled) => {
+  if (enabled) {
+    document.documentElement.classList.add('spring-festival-theme')
+  } else {
+    document.documentElement.classList.remove('spring-festival-theme')
+  }
+  localStorage.setItem('spring-festival-theme', enabled)
+}
+
+// 监听主题变化
+const toggleTheme = () => {
+  springFestivalEnabled.value = !springFestivalEnabled.value
+  updateTheme(springFestivalEnabled.value)
+}
+
+// AI 助手跳转
 function goToAI() {
   window.location.href = 'https://yuanbao.tencent.com/chat/SdEAG1rI5fAw'
 }
 </script>
+
+<div v-if="springFestivalEnabled" class="spring-festival-falling">
+  <span>🧧</span>
+  <span>福</span>
+  <span>🧧</span>
+  <span>福</span>
+  <span>🧧</span>
+  <span>福</span>
+  <span>🧧</span>
+  <span>福</span>
+</div>
+
+<div class="theme-toggle">
+  <button class="toggle-button" @click="toggleTheme">
+    {{ springFestivalEnabled ? '🧧 关闭春节主题' : '🎊 开启春节主题' }}
+  </button>
+</div>
+
+<div class="home-container">
+  <div class="ai-float-button" @click="goToAI">
+    <div class="ai-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21.928 11.607c-.202-.488-.635-.605-.928-.633V8c0-1.103-.897-2-2-2h-6V4.61c.305-.274.5-.668.5-1.11a1.5 1.5 0 0 0-3 0c0 .442.195.836.5 1.11V6H5c-1.103 0-2 .897-2 2v2.997l-.082.006A1 1 0 0 0 1.99 12v2a1 1 0 0 0 1 1H3v5c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5a1 1 0 0 0 1-1v-1.938a1.006 1.006 0 0 0-.072-.455zM5 20V8h14l.001 3.996L19 12v2l.001.005L19 20H5z"/><path fill="currentColor" d="M12 10.5c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5s3.5-1.57 3.5-3.5s-1.57-3.5-3.5-3.5zm0 5c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5s1.5.673 1.5 1.5s-.673 1.5-1.5 1.5zm-4-2.5H6v-2h2v2zm8 0h2v-2h-2v2z"/></svg>
+    </div>
+    <span class="ai-text">问AI</span>
+    <div class="ai-ripple"></div>
+    <div class="ai-glow"></div>
+  </div>
+</div>
 
 <style>
 /* 容器样式 */
@@ -351,5 +398,41 @@ function goToAI() {
 
 .path-item:hover {
   border-color: var(--vp-c-brand);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 70px;
+  right: 16px;
+  z-index: 100;
+}
+
+.toggle-button {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.toggle-button:hover {
+  transform: translateY(-2px);
+  border-color: var(--vp-c-brand);
+  color: var(--vp-c-brand);
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .toggle-button {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
 }
 </style>
