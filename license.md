@@ -2,7 +2,7 @@
 
 ## 版权声明
 
-Copyright © ${new Date().getFullYear()} FUNFE. All Rights Reserved.
+Copyright © 2025 FUNFE. All Rights Reserved.
 
 ## 使用条款
 
