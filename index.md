@@ -47,11 +47,12 @@ features:
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const springFestivalEnabled = ref(false)
+const springFestivalEnabled = ref(true)
 
 onMounted(() => {
-  // 检查本地存储的主题设置
-  const enabled = localStorage.getItem('spring-festival-theme') === 'true'
+  // 检查本地存储的主题设置，如果没有存储过，则使用默认值 true
+  const stored = localStorage.getItem('spring-festival-theme')
+  const enabled = stored === null ? true : stored === 'true'
   springFestivalEnabled.value = enabled
   updateTheme(enabled)
 })
