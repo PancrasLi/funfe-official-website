@@ -355,7 +355,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/funfe-dev' },
+      { icon: 'github', link: 'https://github.com/PancrasLi/funfe-official-website' },
       {
         icon: {
           svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m-1 17.93c-3.95-.49-7-3.85-7-7.93c0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2zM17.9 15.39A2 2 0 0 1 16 17h-1v-1c0-1.1-.9-2-2-2h-2v-2h2c1.1 0 2-.9 2-2V8h2c1.1 0 2-.9 2-2V4.59c2.93 1.19 5 4.06 5 7.41c0 2.08-.8 3.97-2.1 5.39"/></svg>'

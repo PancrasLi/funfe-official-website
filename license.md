@@ -44,7 +44,7 @@ Copyright © 2025 FUNFE. All Rights Reserved.
 
 如需获得更多授权或有任何疑问，请联系：
 - 邮箱：contact@funfe.cn
-- GitHub：https://github.com/pancrasli
+- GitHub：https://github.com/PancrasLi/funfe-official-website
 
 ## 许可协议
 
