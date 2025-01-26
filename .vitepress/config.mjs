@@ -423,14 +423,20 @@ export default defineConfig({
     langMenuLabel: '切换语言'
   },
   vite: {
-    optimizeDeps: {
-      include: ['three']
+    define: {
+      'process.env.VSCODE_TEXTMATE_DEBUG': 'false'
     },
-    ssr: {
-      noExternal: ['monaco-editor']
+    optimizeDeps: {
+      exclude: ['monaco-editor']
     },
     build: {
-      chunkSizeWarningLimit: 1000 // 增加代码分割警告限制
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'monaco': ['monaco-editor']
+          }
+        }
+      }
     }
   },
   sitemap: {
