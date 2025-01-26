@@ -7,13 +7,31 @@ aside: false
 <script setup>
 import { ref, onMounted, shallowRef } from 'vue'
 import * as monaco from 'monaco-editor'
-import EditorWorker from 'monaco-editor/esm/vs/editor/editor.worker?worker'
 
 // 配置 Monaco Editor 的 worker
 if (typeof window !== 'undefined') {
-  self.MonacoEnvironment = {
-    getWorker() {
-      return new EditorWorker()
+  window.MonacoEnvironment = {
+    getWorker(_, label) {
+      const getWorkerModule = (moduleUrl) => {
+        return new Worker(
+          new URL(moduleUrl, import.meta.url),
+          { type: 'module' }
+        )
+      }
+
+      if (label === 'json') {
+        return getWorkerModule('monaco-editor/esm/vs/language/json/json.worker')
+      }
+      if (label === 'css' || label === 'scss' || label === 'less') {
+        return getWorkerModule('monaco-editor/esm/vs/language/css/css.worker')
+      }
+      if (label === 'html' || label === 'handlebars' || label === 'razor') {
+        return getWorkerModule('monaco-editor/esm/vs/language/html/html.worker')
+      }
+      if (label === 'typescript' || label === 'javascript') {
+        return getWorkerModule('monaco-editor/esm/vs/language/typescript/ts.worker')
+      }
+      return getWorkerModule('monaco-editor/esm/vs/editor/editor.worker')
     }
   }
 }

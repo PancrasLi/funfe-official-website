@@ -427,20 +427,16 @@ export default defineConfig({
       'process.env.VSCODE_TEXTMATE_DEBUG': 'false'
     },
     optimizeDeps: {
-      exclude: ['monaco-editor']
+      include: ['monaco-editor']
     },
     build: {
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            'monaco': ['monaco-editor']
-          }
-        }
+      commonjsOptions: {
+        include: [/monaco-editor/]
       }
     },
     worker: {
       format: 'es',
-      plugins: []
+      plugins: () => []
     }
   },
   sitemap: {
