@@ -7,12 +7,13 @@ aside: false
 <script setup>
 import { ref, onMounted, shallowRef } from 'vue'
 import * as monaco from 'monaco-editor'
+import EditorWorker from 'monaco-editor/esm/vs/editor/editor.worker?worker'
 
 // 配置 Monaco Editor 的 worker
 if (typeof window !== 'undefined') {
-  window.MonacoEnvironment = {
-    getWorker(_, label) {
-      return new Worker(new URL('monaco-editor/esm/vs/editor/editor.worker', import.meta.url))
+  self.MonacoEnvironment = {
+    getWorker() {
+      return new EditorWorker()
     }
   }
 }

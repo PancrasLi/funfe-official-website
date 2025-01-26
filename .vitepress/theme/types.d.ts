@@ -21,4 +21,11 @@ declare module 'monaco-editor/esm/vs/language/html/html.worker?worker' {
 declare module 'monaco-editor/esm/vs/language/typescript/ts.worker?worker' {
   const TypeScriptWorker: any
   export default TypeScriptWorker
+}
+
+declare module '*?worker' {
+  const workerConstructor: {
+    new (): Worker
+  }
+  export default workerConstructor
 } 
