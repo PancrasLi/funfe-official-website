@@ -423,21 +423,7 @@ export default defineConfig({
     langMenuLabel: '切换语言'
   },
   vite: {
-    define: {
-      'process.env.VSCODE_TEXTMATE_DEBUG': 'false'
-    },
-    optimizeDeps: {
-      include: ['monaco-editor']
-    },
-    build: {
-      commonjsOptions: {
-        include: [/monaco-editor/]
-      }
-    },
-    worker: {
-      format: 'es',
-      plugins: () => []
-    }
+    // 移除 Monaco Editor 相关配置
   },
   sitemap: {
     hostname: 'https://funfe.cn',
