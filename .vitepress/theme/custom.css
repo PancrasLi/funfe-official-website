@@ -1,348 +1,158 @@
 :root {
-  --vp-home-hero-icon-color: #3451b2;
+  --vp-c-brand: #42b883;
+  --vp-c-brand-light: #42d392;
+  --vp-c-brand-dark: #33a06f;
 }
 
-/* 春节主题变量 */
-html.spring-festival-theme {
-  --vp-c-brand: #ff4d4f !important;
-  --vp-c-brand-light: #ff7875 !important;
-  --vp-c-brand-lighter: #ffa39e !important;
-  --vp-c-brand-dark: #f5222d !important;
-  --vp-c-brand-darker: #cf1322 !important;
-  --vp-button-brand-bg: linear-gradient(45deg, #ff4d4f, #ff7875) !important;
-  --vp-button-brand-hover-bg: linear-gradient(45deg, #ff7875, #ffa39e) !important;
-  --vp-home-hero-icon-color: #ff4d4f;
-  background: 
-    radial-gradient(circle at 20% -50%, rgba(255, 77, 79, 0.25), transparent 70%),
-    radial-gradient(circle at 80% -40%, rgba(255, 216, 102, 0.25), transparent 70%),
-    radial-gradient(circle at 10% 60%, rgba(255, 77, 79, 0.2), transparent 60%),
-    radial-gradient(circle at 90% 90%, rgba(255, 216, 102, 0.2), transparent 60%);
-}
-
-/* 春节主题下的标题样式 */
-html.spring-festival-theme .VPHero .name,
-html.spring-festival-theme .VPHero .text,
-html.spring-festival-theme .VPHero .main-title {
-  background: linear-gradient(120deg, #ff4d4f, #ffd666);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: titleGlow 3s ease-in-out infinite;
-}
-
-/* 特别处理 FUNFE 标题 */
-html.spring-festival-theme .VPHero .clip {
-  background: linear-gradient(120deg, #ff4d4f, #ffd666);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: titleGlow 3s ease-in-out infinite;
-  font-weight: 600;
-}
-
-html.spring-festival-theme .VPHero .tagline {
-  background: linear-gradient(120deg, #ffa39e, #ff7875);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: titleGlow 4s ease-in-out infinite;
-}
-
-@keyframes titleGlow {
-  0%, 100% {
-    filter: drop-shadow(0 0 8px rgba(255, 77, 79, 0.3));
-    transform: scale(1);
-  }
-  50% {
-    filter: drop-shadow(0 0 12px rgba(255, 77, 79, 0.5));
-    transform: scale(1.02);
-  }
-}
-
-/* 暗色模式下的标题样式 */
-html.spring-festival-theme.dark .VPHero .name,
-html.spring-festival-theme.dark .VPHero .text,
-html.spring-festival-theme.dark .VPHero .clip,
-html.spring-festival-theme.dark .VPHero .main-title {
-  background: linear-gradient(120deg, #ff7875, #ffd666);
-  filter: brightness(1.1);
-}
-
-html.spring-festival-theme.dark .VPHero .tagline {
-  background: linear-gradient(120deg, #ffa39e, #ff9c94);
-  filter: brightness(1.1);
-}
-
-/* 春节主题背景装饰 */
-html.spring-festival-theme::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  background: 
-    radial-gradient(3px 3px at 40px 60px, #FFD8CC 50%, rgba(0,0,0,0)),
-    radial-gradient(3px 3px at 20px 50px, #FFB4AA 50%, rgba(0,0,0,0)),
-    radial-gradient(3px 3px at 30px 100px, #FF9C94 50%, rgba(0,0,0,0)),
-    radial-gradient(3px 3px at 40px 60px, #FF887E 50%, rgba(0,0,0,0)),
-    radial-gradient(3px 3px at 110px 90px, #FF7875 50%, rgba(0,0,0,0)),
-    radial-gradient(3px 3px at 90px 90px, #FF6B67 50%, rgba(0,0,0,0)),
-    radial-gradient(3px 3px at 160px 120px, #FFD8CC 50%, rgba(0,0,0,0)),
-    radial-gradient(3px 3px at 150px 40px, #FFB4AA 50%, rgba(0,0,0,0));
-  background-size: 200px 200px;
-  background-repeat: repeat;
-  animation: sparkle 60s linear infinite;
-  opacity: 0.5;
-}
-
-/* 飘落的装饰元素 */
-.spring-festival-falling {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: 100;
-}
-
-.spring-festival-falling span {
-  position: fixed;
-  pointer-events: none;
-  font-size: 24px;
-  opacity: 0;
-  animation: fall 6s linear infinite;
-}
-
-.spring-festival-falling span:nth-child(1) { content: '🧧'; left: 10%; animation-delay: 0s; }
-.spring-festival-falling span:nth-child(2) { content: '福'; left: 30%; animation-delay: -2s; }
-.spring-festival-falling span:nth-child(3) { content: '🧧'; left: 50%; animation-delay: -1s; }
-.spring-festival-falling span:nth-child(4) { content: '福'; left: 70%; animation-delay: -3s; }
-.spring-festival-falling span:nth-child(5) { content: '🧧'; left: 90%; animation-delay: -2.5s; }
-.spring-festival-falling span:nth-child(6) { content: '福'; left: 20%; animation-delay: -4s; }
-.spring-festival-falling span:nth-child(7) { content: '🧧'; left: 40%; animation-delay: -3.5s; }
-.spring-festival-falling span:nth-child(8) { content: '福'; left: 60%; animation-delay: -1.5s; }
-
-@keyframes sparkle {
-  0% { background-position: 0 0; }
-  100% { background-position: 400px 400px; }
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(-50px) rotate(0deg);
-    opacity: 1;
-  }
-  25% {
-    transform: translateY(25vh) translateX(100px) rotate(90deg);
-    opacity: 0.8;
-  }
-  50% {
-    transform: translateY(50vh) translateX(-100px) rotate(180deg);
-    opacity: 0.6;
-  }
-  75% {
-    transform: translateY(75vh) translateX(50px) rotate(270deg);
-    opacity: 0.4;
-  }
-  100% {
-    transform: translateY(calc(100vh + 50px)) translateX(-50px) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-/* 暗色模式适配 */
-html.spring-festival-theme.dark {
-  background: 
-    radial-gradient(circle at 20% -50%, rgba(255, 77, 79, 0.15), transparent 70%),
-    radial-gradient(circle at 80% -40%, rgba(255, 216, 102, 0.15), transparent 70%),
-    radial-gradient(circle at 10% 60%, rgba(255, 77, 79, 0.1), transparent 60%),
-    radial-gradient(circle at 90% 90%, rgba(255, 216, 102, 0.1), transparent 60%);
-}
-
-html.spring-festival-theme.dark::before {
-  opacity: 0.25;
-}
-
-/* 针对 img 标签的样式 */
 .VPFeatures .VPFeature .icon img,
-.VPFeatures .item .icon img {
-  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(1702%) hue-rotate(211deg) brightness(97%) contrast(89%);
+.VPFeatures .VPFeature .icon svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+.dark .VPFeatures .VPFeature .icon img,
+.dark .VPFeatures .VPFeature .icon svg {
+  filter: invert(1);
+}
+
+.VPFeatures .item {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 24px;
+  height: 100%;
+  background-color: var(--vp-c-bg-soft);
   transition: all 0.3s ease;
 }
 
-/* 暗色模式下的图标颜色 */
-.dark .VPFeatures .VPFeature .icon img,
-.dark .VPFeatures .item .icon img {
-  filter: brightness(0) saturate(100%) invert(80%) sepia(27%) saturate(638%) hue-rotate(182deg) brightness(101%) contrast(101%);
-}
-
-/* 特性卡片的基础样式和动画效果 */
-.VPFeatures .item {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: transparent;
-  backdrop-filter: blur(0);
-  border: none;
-  padding: 20px;
-}
-
 .VPFeatures .item:hover {
-  transform: translateY(-6px);
-  background: rgba(var(--vp-c-bg-soft-rgb), 0.7);
-  backdrop-filter: blur(10px);
-  box-shadow: 
-    0 8px 16px rgba(0, 0, 0, 0.08),
-    0 4px 8px rgba(0, 0, 0, 0.03);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand);
 }
 
-/* 图标动画效果增强 */
 .VPFeatures .item .icon {
-  position: relative;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
 .VPFeatures .item .icon img {
   width: 48px;
   height: 48px;
-  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transform-origin: center;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
 }
 
-/* 悬停动画效果 */
 .VPFeatures .item:hover .icon img {
-  transform: scale(1.2) rotate(8deg);
-  filter: drop-shadow(0 0 8px rgba(var(--vp-c-brand-rgb), 0.35));
+  transform: scale(1.1);
 }
 
-/* 添加图标背景光效 */
 .VPFeatures .item .icon::before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: radial-gradient(
-    circle,
-    rgba(var(--vp-c-brand-rgb), 0.1) 0%,
-    transparent 70%
-  );
-  transform: translate(-50%, -50%);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: -1;
-  opacity: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--vp-c-brand);
+  opacity: 0.1;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s ease;
 }
 
 .VPFeatures .item:hover .icon::before {
-  width: 60px;
-  height: 60px;
-  opacity: 1;
+  transform: scale(1.5);
 }
 
-/* 添加弹跳动画 */
 @keyframes iconBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+  50% { transform: translateY(-10px); }
 }
 
 .VPFeatures .item:hover .icon {
-  animation: iconBounce 1s ease-in-out infinite;
+  animation: iconBounce 1s ease infinite;
 }
 
-/* 标题动画效果优化 */
 .VPFeatures .item .title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
   position: relative;
-  transition: all 0.3s ease;
-  opacity: 0.9;
 }
 
 .VPFeatures .item:hover .title {
   color: var(--vp-c-brand);
-  opacity: 1;
-  transform: translateY(-2px);
 }
 
-/* 标题下划线动画优化 */
 .VPFeatures .item .title::after {
   content: '';
   position: absolute;
   bottom: -4px;
-  left: 50%;
+  left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, 
-    transparent, 
-    var(--vp-c-brand), 
-    transparent
-  );
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
+  background: var(--vp-c-brand);
+  transition: width 0.3s ease;
 }
 
 .VPFeatures .item:hover .title::after {
   width: 100%;
-  left: 0;
-  opacity: 1;
 }
 
-/* 描述文字动画 */
 .VPFeatures .item .details {
-  transition: all 0.3s ease;
-  opacity: 0.8;
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+  transition: color 0.3s ease;
 }
 
 .VPFeatures .item:hover .details {
-  opacity: 1;
-  transform: translateY(-2px);
+  color: var(--vp-c-text-1);
 }
 
-/* 添加鼠标悬停时的光晕效果 */
 .VPFeatures .item::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: inherit;
+  width: 100%;
+  height: 100%;
   background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(var(--vp-c-brand-rgb), 0.06),
-    transparent 40%
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(66, 184, 131, 0.1) 0%,
+    transparent 100%
   );
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 1;
   pointer-events: none;
+  border-radius: 12px;
 }
 
 .VPFeatures .item:hover::before {
   opacity: 1;
 }
 
-/* 直接针对图标容器 */
 .VPFeatures .VPFeature .icon {
-  stroke: var(--vp-home-hero-icon-color) !important;
-  color: var(--vp-home-hero-icon-color) !important;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
 }
 
-/* 针对图标内部的所有元素 */
 .VPFeatures .VPFeature .icon svg * {
-  stroke: var(--vp-home-hero-icon-color) !important;
-  color: var(--vp-home-hero-icon-color) !important;
+  stroke: var(--vp-c-brand);
+  fill: none;
 }
 
-/* AI 入口按钮样式 */
 .VPNav .VPNavBar .nav-ai-link {
-  position: relative;
-  padding: 6px 12px;
-  background: linear-gradient(45deg, #3451b2, #42b883);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  color: var(--vp-c-brand);
+  background: var(--vp-c-bg-soft);
   border-radius: 20px;
-  color: white !important;
   transition: all 0.3s ease;
+  position: relative;
   overflow: hidden;
 }
 
-/* 发光效果 */
 .VPNav .VPNavBar .nav-ai-link::before {
   content: '';
   position: absolute;
@@ -353,100 +163,75 @@ html.spring-festival-theme.dark::before {
   background: linear-gradient(
     45deg,
     transparent,
-    rgba(255, 255, 255, 0.1),
+    rgba(66, 184, 131, 0.1),
     transparent
   );
   transform: rotate(45deg);
   animation: shine 3s infinite;
 }
 
-/* 悬停效果 */
-.VPNav .VPNavBar .nav-ai-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(52, 81, 178, 0.3);
-}
-
-/* 发光动画 */
 @keyframes shine {
   0% {
-    left: -50%;
+    transform: translateX(-100%) rotate(45deg);
   }
   100% {
-    left: 150%;
+    transform: translateX(100%) rotate(45deg);
   }
 }
 
-/* 脉冲动画 */
 .VPNav .VPNavBar .nav-ai-link::after {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 5px;
-  height: 5px;
-  background: rgba(255, 255, 255, 0.5);
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  background: var(--vp-c-brand);
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
   0% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translateY(-50%) scale(1);
     opacity: 1;
   }
+  50% {
+    transform: translateY(-50%) scale(1.5);
+    opacity: 0.5;
+  }
   100% {
-    transform: translate(-50%, -50%) scale(20);
-    opacity: 0;
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
   }
 }
 
-/* Hide footer on playground page */
 html.hide-footer .VPFooter {
-  display: none !important;
+  display: none;
 }
 
-/* Adjust main content height when footer is hidden */
 html.hide-footer .VPContent {
-  padding-bottom: 0 !important;
-  min-height: calc(100vh - var(--vp-nav-height)) !important;
+  padding-bottom: 0;
 }
 
-/* 确保按钮样式 */
 .VPButton.brand {
-  background: var(--vp-button-brand-bg);
-  border: 1px solid var(--vp-c-brand);
-  color: white !important;
+  background: var(--vp-c-brand);
+  border-color: var(--vp-c-brand-dark);
 }
 
 .VPButton.brand:hover {
-  background: var(--vp-button-brand-hover-bg);
-  border-color: var(--vp-c-brand-light);
-  transform: translateY(-1px);
+  background: var(--vp-c-brand-dark);
+  border-color: var(--vp-c-brand-dark);
 }
 
 .VPButton.alt {
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-divider);
+  border: 1px solid var(--vp-c-brand);
+  color: var(--vp-c-brand);
 }
 
 .VPButton.alt:hover {
-  border-color: var(--vp-c-brand);
-  color: var(--vp-c-brand);
-  background: var(--vp-c-bg-soft);
-}
-
-/* 春节主题下的按钮样式 */
-html.spring-festival-theme .VPButton.brand {
-  background: var(--vp-button-brand-bg);
-  border: 1px solid var(--vp-c-brand);
-  color: white !important;
-}
-
-html.spring-festival-theme .VPButton.brand:hover {
-  background: var(--vp-button-brand-hover-bg);
-  border-color: var(--vp-c-brand-light);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 77, 79, 0.2);
+  background: var(--vp-c-brand);
+  color: white;
 }
 

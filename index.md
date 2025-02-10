@@ -43,58 +43,12 @@ features:
     details: 参与开源项目，培养协作精神和工程实践能力
 ---
 
-
 <script setup>
-import { ref, onMounted } from 'vue'
-
-const springFestivalEnabled = ref(true)
-
-onMounted(() => {
-  // 检查本地存储的主题设置，如果没有存储过，则使用默认值 true
-  const stored = localStorage.getItem('spring-festival-theme')
-  const enabled = stored === null ? true : stored === 'true'
-  springFestivalEnabled.value = enabled
-  updateTheme(enabled)
-})
-
-// 更新主题
-const updateTheme = (enabled) => {
-  if (enabled) {
-    document.documentElement.classList.add('spring-festival-theme')
-  } else {
-    document.documentElement.classList.remove('spring-festival-theme')
-  }
-  localStorage.setItem('spring-festival-theme', enabled)
-}
-
-// 监听主题变化
-const toggleTheme = () => {
-  springFestivalEnabled.value = !springFestivalEnabled.value
-  updateTheme(springFestivalEnabled.value)
-}
-
 // AI 助手跳转
 function goToAI() {
   window.location.href = 'https://yuanbao.tencent.com/chat/SdEAG1rI5fAw'
 }
 </script>
-
-<div v-if="springFestivalEnabled" class="spring-festival-falling">
-  <span>🧧</span>
-  <span>福</span>
-  <span>🧧</span>
-  <span>福</span>
-  <span>🧧</span>
-  <span>福</span>
-  <span>🧧</span>
-  <span>福</span>
-</div>
-
-<div class="theme-toggle">
-  <button class="toggle-button" @click="toggleTheme">
-    {{ springFestivalEnabled ? '🧧 关闭春节主题' : '🎊 开启春节主题' }}
-  </button>
-</div>
 
 <div class="home-container">
   <div class="ai-float-button" @click="goToAI">
