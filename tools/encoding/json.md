@@ -4,40 +4,78 @@ description: 在线JSON格式化工具，支持JSON美化、压缩、校验等�
 ---
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch, computed } from 'vue'
+import JsonViewer from './components/JsonViewer.vue'
 
 const inputText = ref('')
-const outputText = ref('')
+const parsedJson = ref(null)
 const indentSize = ref(2)
-const mode = ref('format') // format, compress, validate
+const mode = ref('format')
+const isFullscreen = ref(false)
+const errorMessage = ref('')
+
+// 计算输出结果
+const outputText = computed(() => {
+  if (!parsedJson.value) return ''
+  
+  if (mode.value === 'format') {
+    return JSON.stringify(parsedJson.value, null, Number(indentSize.value))
+  } else if (mode.value === 'compress') {
+    return JSON.stringify(parsedJson.value)
+  } else {
+    return '√ JSON 格式正确'
+  }
+})
+
+// 监听输入变化，自动格式化
+watch(inputText, (newValue) => {
+  if (newValue.trim()) {
+    handleFormat()
+  } else {
+    parsedJson.value = null
+    errorMessage.value = ''
+  }
+}, { debounce: 300 })
+
+// 监听模式变化，重新格式化
+watch(mode, () => {
+  if (inputText.value.trim()) {
+    handleFormat()
+  }
+})
 
 const handleFormat = () => {
   try {
-    const obj = JSON.parse(inputText.value)
-    if (mode.value === 'format') {
-      outputText.value = JSON.stringify(obj, null, indentSize.value)
-    } else if (mode.value === 'compress') {
-      outputText.value = JSON.stringify(obj)
-    } else {
-      outputText.value = '√ JSON 格式正确'
-    }
+    parsedJson.value = JSON.parse(inputText.value)
+    errorMessage.value = ''
   } catch (e) {
-    outputText.value = `× 错误：${e.message}`
+    errorMessage.value = e.message
+    parsedJson.value = null
   }
 }
 
 const handleCopy = async () => {
   try {
     await navigator.clipboard.writeText(outputText.value)
-    alert('已复制到剪贴板')
+    showToast('已复制到剪贴板')
   } catch (e) {
-    alert('复制失败，请手动复制')
+    showToast('复制失败，请手动复制', 'error')
   }
 }
 
 const handleClear = () => {
   inputText.value = ''
-  outputText.value = ''
+  parsedJson.value = null
+  errorMessage.value = ''
+}
+
+// 添加提示框功能
+const toast = ref({ show: false, message: '', type: 'success' })
+const showToast = (message, type = 'success') => {
+  toast.value = { show: true, message, type }
+  setTimeout(() => {
+    toast.value.show = false
+  }, 3000)
 }
 
 const sampleJson = {
@@ -58,98 +96,174 @@ const loadSample = () => {
   inputText.value = JSON.stringify(sampleJson)
   handleFormat()
 }
+
+const toggleFullscreen = () => {
+  isFullscreen.value = !isFullscreen.value
+}
 </script>
 
 # JSON 格式化工具
 
-<div class="tool-container">
+<div class="json-tool" :class="{ 'is-fullscreen': isFullscreen }">
   <div class="tool-header">
     <div class="mode-switch">
       <button 
-        :class="{ active: mode === 'format' }" 
-        @click="mode = 'format'"
+        v-for="(label, key) in { format: '格式化', compress: '压缩', validate: '校验' }"
+        :key="key"
+        :class="{ active: mode === key }" 
+        @click="mode = key"
       >
-        格式化
-      </button>
-      <button 
-        :class="{ active: mode === 'compress' }" 
-        @click="mode = 'compress'"
-      >
-        压缩
-      </button>
-      <button 
-        :class="{ active: mode === 'validate' }" 
-        @click="mode = 'validate'"
-      >
-        校验
+        {{ label }}
       </button>
     </div>
     <div class="tool-options" v-if="mode === 'format'">
-      <label>缩进空格：</label>
+      <label>缩进：</label>
       <select v-model="indentSize">
-        <option value="2">2</option>
-        <option value="4">4</option>
-        <option value="8">8</option>
+        <option value="2">2 空格</option>
+        <option value="4">4 空格</option>
+        <option value="8">8 空格</option>
       </select>
+    </div>
+    <div class="tool-actions">
+      <button @click="handleClear" class="clear-btn" title="清空">
+        <span class="icon">🗑️</span>
+      </button>
+      <button @click="toggleFullscreen" class="fullscreen-btn">
+        {{ isFullscreen ? '退出全屏' : '全屏' }}
+      </button>
     </div>
   </div>
 
-  <div class="input-area">
-    <textarea
-      v-model="inputText"
-      placeholder="请输入JSON字符串"
-    ></textarea>
-    <button 
-      class="sample-btn"
-      @click="loadSample"
-    >
-      加载示例
-    </button>
+  <div class="tool-body">
+    <div class="input-panel">
+      <div class="panel-header">
+        <h3>输入 JSON</h3>
+        <button class="sample-btn" @click="loadSample">加载示例</button>
+      </div>
+      <textarea
+        v-model="inputText"
+        placeholder="请输入 JSON 字符串..."
+        class="json-input"
+        :class="{ 'has-error': errorMessage }"
+      ></textarea>
+      <div v-if="errorMessage" class="error-message">
+        ❌ {{ errorMessage }}
+      </div>
+    </div>
+    <div class="output-panel">
+      <div class="panel-header">
+        <h3>输出结果</h3>
+        <button 
+          v-if="parsedJson" 
+          class="copy-btn" 
+          @click="handleCopy"
+          title="复制到剪贴板"
+        >
+          📋 复制
+        </button>
+      </div>
+      <template v-if="mode === 'format' && parsedJson">
+        <JsonViewer
+          :value="parsedJson"
+          :indent="Number(indentSize)"
+        />
+      </template>
+      <textarea
+        v-else
+        :value="outputText"
+        readonly
+        class="json-output"
+        :placeholder="mode === 'validate' ? '验证结果将显示在这里' : '转换结果将显示在这里'"
+      ></textarea>
+    </div>
   </div>
 
-  <div class="button-group">
-    <button class="primary" @click="handleFormat">
-      {{ mode === 'format' ? '格式化' : mode === 'compress' ? '压缩' : '验证' }}
-    </button>
-    <button @click="handleClear">清空</button>
-  </div>
-
-  <div class="output-area">
-    <textarea
-      v-model="outputText"
-      readonly
-      :placeholder="mode === 'validate' ? '验证结果将显示在这里' : '转换结果将显示在这里'"
-    ></textarea>
-    <button 
-      class="copy-btn"
-      v-if="outputText && mode !== 'validate'"
-      @click="handleCopy"
-    >
-      复制结果
-    </button>
+  <!-- 添加提示框 -->
+  <div 
+    v-if="toast.show" 
+    class="toast-message"
+    :class="toast.type"
+  >
+    {{ toast.message }}
   </div>
 </div>
 
 <style scoped>
-/* 基础样式与之前相同 */
-.tool-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+.json-tool {
+  width: 100%;
+  height: calc(100vh - 200px);
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
   background: var(--vp-c-bg-soft);
   border-radius: 8px;
+  overflow: hidden;
+  position: relative;
 }
 
-.tool-header {
-  margin-bottom: 20px;
+.json-tool.is-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  border-radius: 0;
+}
+
+.tool-body {
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.input-panel,
+.output-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--vp-c-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.panel-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 12px 16px;
+  background: var(--vp-c-bg);
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.json-input,
+.json-output {
+  flex: 1;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  font-family: var(--vp-font-family-mono);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--vp-c-text-1);
+  background: transparent;
+  resize: none;
+}
+
+.json-input:focus {
+  outline: none;
+}
+
+.json-input.has-error {
+  border-color: var(--vp-c-danger);
 }
 
 .mode-switch {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
 .tool-options {
@@ -164,87 +278,24 @@ const loadSample = () => {
   border-radius: 4px;
   background: var(--vp-c-bg);
   color: var(--vp-c-text-1);
+  font-size: 14px;
 }
 
-.mode-switch button {
-  padding: 8px 16px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 4px;
-  background: var(--vp-c-bg);
-  color: var(--vp-c-text-2);
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.mode-switch button.active {
-  background: var(--vp-c-brand);
-  color: white;
-  border-color: var(--vp-c-brand);
-}
-
-.input-area,
-.output-area {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-textarea {
-  width: 100%;
-  min-height: 200px;
-  padding: 12px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 4px;
-  background: var(--vp-c-bg);
-  color: var(--vp-c-text-1);
-  font-family: var(--vp-font-family-mono);
-  resize: vertical;
-  line-height: 1.5;
-}
-
-textarea:focus {
-  outline: none;
-  border-color: var(--vp-c-brand);
-}
-
-.button-group {
+.tool-actions {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 8px;
 }
 
-button {
-  padding: 8px 16px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 4px;
-  background: var(--vp-c-bg);
-  color: var(--vp-c-text-2);
-  cursor: pointer;
-  transition: all 0.2s;
+.clear-btn,
+.copy-btn {
+  padding: 4px 8px;
+  font-size: 13px;
 }
 
-button.primary {
-  background: var(--vp-c-brand);
-  color: white;
-  border-color: var(--vp-c-brand);
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-.copy-btn,
 .sample-btn {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
   padding: 4px 8px;
   font-size: 0.9em;
   background: var(--vp-c-bg);
-}
-
-.sample-btn {
-  bottom: auto;
-  top: 10px;
 }
 
 /* Dark mode optimization */
@@ -255,5 +306,106 @@ button:hover {
 :deep(.dark) textarea,
 :deep(.dark) select {
   background: var(--vp-c-bg);
+}
+
+/* 新增 JsonViewer 组件样式 */
+:deep(.json-viewer) {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .tool-body {
+    flex-direction: column;
+  }
+  
+  .json-tool {
+    height: auto;
+  }
+
+  .tool-header {
+    flex-wrap: wrap;
+  }
+
+  .tool-options {
+    width: 100%;
+    order: 3;
+    margin-top: 8px;
+  }
+}
+
+/* 全屏模式优化 */
+.is-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  border-radius: 0;
+}
+
+/* 按钮样式优化 */
+button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+button:hover {
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+}
+
+/* 错误消息样式 */
+.error-message {
+  padding: 8px 16px;
+  color: var(--vp-c-danger);
+  background: var(--vp-c-danger-soft);
+  font-size: 0.9em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* 提示框样式 */
+.toast-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 4px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.toast-message.success {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-dark);
+}
+
+.toast-message.error {
+  background: var(--vp-c-danger-soft);
+  color: var(--vp-c-danger-dark);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, 20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
 }
 </style> 
