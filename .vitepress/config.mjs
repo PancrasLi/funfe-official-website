@@ -41,15 +41,6 @@ export default defineConfig({
     ['meta', { name: 'twitter:description', content: '专注前端技术分享与少儿编程教育的在线学习平台，提供JavaScript教程、Vue开发、图形化编程等优质内容，以及Base64转换、URL编解码、JSON格式化等实用在线工具' }],
     ['meta', { name: 'twitter:image', content: 'https://funfe.cn/images/twitter-card.jpg' }],
     
-    // PWA tags
-    ['link', { rel: 'manifest', href: '/manifest.json' }],
-    ['meta', { name: 'application-name', content: 'FUNFE' }],
-    ['meta', { name: 'apple-mobile-web-app-title', content: 'FUNFE' }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/icons/apple-touch-icon.png' }],
-    ['link', { rel: 'mask-icon', href: '/images/icons/safari-pinned-tab.svg', color: '#3451b2' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#3451b2' }],
-    ['meta', { name: 'msapplication-config', content: '/browserconfig.xml' }],
-
     // Analytics
     ['script', {
       async: true,
@@ -58,6 +49,15 @@ export default defineConfig({
       'data-utcoffset': '8'
     }],
    
+    // 添加 Waline 脚本和样式
+    ['link', { 
+      rel: 'stylesheet',
+      href: '//unpkg.com/@waline/client@v2/dist/waline.css'
+    }],
+    ['script', { 
+      src: '//unpkg.com/@waline/client@v2/dist/waline.js',
+      defer: true
+    }],
   ],
 
   themeConfig: {
@@ -121,7 +121,14 @@ export default defineConfig({
         link: 'https://yuanbao.tencent.com/chat/SdEAG1rI5fAw',
         class: 'nav-ai-link'
       },
-      { text: '博客', link: 'https://blog.funfe.cn' }
+      { text: '博客', link: 'https://blog.funfe.cn' },
+      {
+        text: '问题反馈',
+        items: [
+          { text: 'GitHub Issues', link: 'https://github.com/PancrasLi/funfe-official-website/issues' },
+          { text: '在线反馈', link: '/feedback/' }
+        ]
+      }
     ],
 
     sidebar: {
