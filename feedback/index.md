@@ -4,10 +4,11 @@ description: 欢迎提供您的宝贵意见和建议
 ---
 
 <script setup>
-import { onMounted, ref } from 'vue'
-import { useData } from 'vitepress'
+import { onMounted, ref, watch } from 'vue'
+import { useData, useRoute } from 'vitepress'
 
 const { isDark } = useData()
+const route = useRoute()
 const walineInstance = ref(null)
 
 onMounted(() => {
@@ -79,6 +80,16 @@ onMounted(() => {
     initWaline()
   }
 })
+
+// 监听路由变化
+watch(
+  () => route.path,
+  () => {
+    if (typeof window !== 'undefined') {
+      initWaline()
+    }
+  }
+)
 </script>
 
 <template>
