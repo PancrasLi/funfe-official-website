@@ -1,6 +1,8 @@
 ---
 title: 问题反馈
 description: 欢迎提供您的宝贵意见和建议
+# 类型为page
+type: page
 ---
 
 <script setup>
