@@ -62,7 +62,7 @@ onMounted(() => {
           requiredMeta: ['nick', 'mail'],
           reaction: true,
           locale: {
-            reactionTitle:"欢迎您对funfe提出宝贵的意见和建议！"
+            reactionTitle:"欢迎您对funfe提出宝贵的意见和建议！",
             placeholder: '欢迎留下您的意见和建议...'
           }
         })
