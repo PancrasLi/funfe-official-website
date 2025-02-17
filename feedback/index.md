@@ -46,7 +46,7 @@ onMounted(() => {
         // 初始化 Waline
         walineInstance.value = window.Waline.init({
           el: '#waline',
-          serverURL: 'https://funfe-feedback.vercel.app/',
+          serverURL: 'https://feedback-api.funfe.cn/',
           dark: isDark.value,
           lang: 'zh-CN',
           login: 'force',
@@ -62,6 +62,7 @@ onMounted(() => {
           requiredMeta: ['nick', 'mail'],
           reaction: true,
           locale: {
+            reactionTitle:"欢迎您对funfe提出宝贵的意见和建议！"
             placeholder: '欢迎留下您的意见和建议...'
           }
         })
