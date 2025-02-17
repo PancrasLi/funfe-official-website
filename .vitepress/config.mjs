@@ -126,7 +126,7 @@ export default defineConfig({
         text: '问题反馈',
         items: [
           { text: 'GitHub Issues', link: 'https://github.com/PancrasLi/funfe-official-website/issues' },
-          { text: '在线反馈', link: '/feedback/' }
+          { text: '在线反馈', link: 'https://www.funfe.cn/feedback/' }
         ]
       }
     ],
