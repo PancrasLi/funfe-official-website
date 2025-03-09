@@ -237,4 +237,4 @@ Thumbs.db
 
 通过精心配置忽略文件设置，您可以显著提高 Cursor 的 AI 功能性能和相关性。这种投入最终会通过更加准确的代码建议、更快的索引速度和更相关的 AI 辅助来回报您。
 
-如有任何问题，请参考[常见问题解答](/cursor-faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 
+如有任何问题，请参考[常见问题解答](/ai/cursor/faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 

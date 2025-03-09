@@ -74,4 +74,4 @@ Cursor Tab 可以与其他 AI 功能协同工作：
 
 ---
 
-希望本指南能帮助您充分利用 Cursor Tab 功能，提高编码效率。如有任何问题，请参考[常见问题解答](/cursor-faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 
+希望本指南能帮助您充分利用 Cursor Tab 功能，提高编码效率。如有任何问题，请参考[常见问题解答](/ai/cursor/faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 

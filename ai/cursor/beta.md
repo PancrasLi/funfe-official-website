@@ -96,4 +96,4 @@ Cursor 的 Beta 功能会定期更新和变化。以下是一些可能包含在�
 
 请记住定期查看 Cursor 的更新公告，了解新的 Beta 功能和现有 Beta 功能转为稳定版的情况。
 
-如有任何问题，请参考[常见问题解答](/cursor-faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 
+如有任何问题，请参考[常见问题解答](/ai/cursor/faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 

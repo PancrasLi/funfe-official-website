@@ -24,7 +24,7 @@ Cursor 是一款革命性的 AI 代码编辑器，它能够理解您的代码库
       <li><strong>Ask 聊天功能</strong> - 与了解您代码库的 AI 交流，获取答案和建议</li>
       <li><strong>⌘K 内联编辑</strong> - 使用自然语言快速编辑和生成代码</li>
     </ul>
-    <p>想了解更多详情？查看我们的 <a href="/cursor-manual">完整使用手册</a> 和 <a href="/cursor-welcome">官方文档翻译</a>。</p>
+    <p>想了解更多详情？查看我们的 <a href="/ai/cursor/manual">完整使用手册</a> 和 <a href="/ai/cursor/welcome">官方文档翻译</a>。</p>
   </div>
 </div>
 
@@ -111,10 +111,10 @@ function calculateTotal(items, taxRate) {
 
 ## 更多资源
 
-- [详细使用手册](/cursor-manual) - 从入门到精通的完整指南
-- [官方文档翻译](/cursor-welcome) - Cursor 官方文档的中文翻译
-- [常见问题解答](/cursor-faq) - 解答使用过程中的常见疑问
-- [键盘快捷键](/cursor-shortcuts) - 全面的快捷键列表
+- [详细使用手册](/ai/cursor/manual) - 从入门到精通的完整指南
+- [官方文档翻译](/ai/cursor/welcome) - Cursor 官方文档的中文翻译
+- [常见问题解答](/ai/cursor/faq) - 解答使用过程中的常见疑问
+- [键盘快捷键](/ai/cursor/shortcuts) - 全面的快捷键列表
 
 ---
 

@@ -1,147 +1,158 @@
 # Cursor 键盘快捷键
 
-> **免责声明**：本文档是 [Cursor 官方文档中的键盘快捷键页面](https://docs.cursor.com/kbd)的**第三方非官方中文翻译**，仅供学习参考。内容可能不完全反映最新的官方信息，请以 [Cursor 官方文档](https://docs.cursor.com) 为准。所有商标和版权归 Cursor/Anysphere 公司所有。
+> **免责声明**：本文档是关于 [Cursor 键盘快捷键](https://docs.cursor.com/keyboard-shortcuts)的**第三方非官方中文文档**，仅供学习参考。内容可能不完全反映最新的官方信息，请以 [Cursor 官方文档](https://docs.cursor.com) 为准。所有商标和版权归 Cursor/Anysphere 公司所有。
 
-> 本文档提供了 Cursor 各功能的键盘快捷键全面指南，包括聊天、Composer、Tab 和 Agent 等功能的快捷键。
+> 本文档提供了 Cursor 编辑器的常用键盘快捷键列表，帮助您更高效地使用 Cursor。
 
 ---
-
-## 概述
-
-本文提供了 Cursor 键盘快捷键和键位绑定的高级概览。您可以通过按下 `⌘R` 然后 `⌘S`（在 Windows 上为 `Ctrl+R` 然后 `Ctrl+S`）查看所有键盘快捷键。
-
-Cursor 的键位绑定基于 VS Code 的键位绑定，因此如果您熟悉 VS Code，许多快捷键将是相似的。
-
-所有 macOS 上的 `⌘` 键在 Windows 和 Linux 上可以替换为 `Ctrl` 键。
 
 ## 通用快捷键
 
-以下是 Cursor 中最常用的通用快捷键：
+### 编辑器操作
 
-| 快捷键 | 操作 |
-| --- | --- |
-| ⌘ + I | 打开 Composer |
-| ⌘ + L | 打开聊天 |
-| ⌘ + . | 在 Composer 中切换 Agent |
-| ⌘ + / | 切换 AI 模型 |
-| ⌘ + Alt + L | 打开聊天和 Composer 历史记录 |
-| ⌘ + Shift + J | 打开 Cursor 设置 |
-| ⌘ + Shift + P | 打开命令面板 |
+| 功能 | Windows/Linux | macOS |
+|------|--------------|-------|
+| 打开设置 | Ctrl + , | ⌘ + , |
+| 打开命令面板 | Ctrl + Shift + P | ⌘ + Shift + P |
+| 打开文件 | Ctrl + P | ⌘ + P |
+| 保存文件 | Ctrl + S | ⌘ + S |
+| 保存所有文件 | Ctrl + Alt + S | ⌘ + Option + S |
+| 关闭当前编辑器 | Ctrl + W | ⌘ + W |
+| 关闭所有编辑器 | Ctrl + K W | ⌘ + K W |
+| 切换全屏 | F11 | ⌘ + Ctrl + F |
+| 新建文件 | Ctrl + N | ⌘ + N |
+| 切换侧边栏可见性 | Ctrl + B | ⌘ + B |
+| 切换面板可见性 | Ctrl + J | ⌘ + J |
 
-## 聊天快捷键
+### 代码导航
 
-使用 Ask 功能时的快捷键：
+| 功能 | Windows/Linux | macOS |
+|------|--------------|-------|
+| 转到定义 | F12 | F12 |
+| 转到引用 | Shift + F12 | Shift + F12 |
+| 向前导航 | Alt + → | ⌘ + ] |
+| 向后导航 | Alt + ← | ⌘ + [ |
+| 转到行 | Ctrl + G | ⌘ + G |
+| 转到符号 | Ctrl + Shift + O | ⌘ + Shift + O |
+| 转到文件中的符号 | Ctrl + P # | ⌘ + P # |
+| 查找所有引用 | Alt + Shift + F12 | Option + Shift + F12 |
 
-| 快捷键 | 操作 |
-| --- | --- |
-| ⌘ + Enter | 使用代码库提交 |
-| Enter | 提交 |
-| ↑ | 选择上一条消息 |
-| 选择代码, ⌘ + L | 添加选中的代码作为上下文 |
-| 选择代码, ⌘ + Shift + L | 添加选中的代码作为上下文 |
+### 代码编辑
 
-## Composer 快捷键
+| 功能 | Windows/Linux | macOS |
+|------|--------------|-------|
+| 缩进行 | Tab | Tab |
+| 减少缩进 | Shift + Tab | Shift + Tab |
+| 复制行 | Shift + Alt + ↓ | Shift + Option + ↓ |
+| 移动行 | Alt + ↑ / ↓ | Option + ↑ / ↓ |
+| 删除行 | Ctrl + Shift + K | ⌘ + Shift + K |
+| 在上方插入行 | Ctrl + Shift + Enter | ⌘ + Shift + Enter |
+| 在下方插入行 | Ctrl + Enter | ⌘ + Enter |
+| 添加光标到下一行 | Ctrl + Alt + ↓ | ⌘ + Option + ↓ |
+| 添加光标到上一行 | Ctrl + Alt + ↑ | ⌘ + Option + ↑ |
+| 撤销 | Ctrl + Z | ⌘ + Z |
+| 重做 | Ctrl + Shift + Z | ⌘ + Shift + Z |
 
-使用 Composer 多文件编辑时的快捷键：
+### 搜索与替换
 
-| 快捷键 | 操作 |
-| --- | --- |
-| ⌘ + Backspace | 取消生成 |
-| ⌘ + Enter | 接受所有更改 |
-| ⌘ + Backspace | 拒绝所有更改 |
-| Tab | 循环到下一条消息 |
-| Shift + Tab | 循环到上一条消息 |
-| ⌘ + Alt + / | 打开模型切换 |
-| ⌘ + N | 创建新的 Composer |
-| ⌘ + R | 创建新的 Composer |
-| ⌘ + Shift + K | 以栏形式打开 Composer |
-| ⌘ + \[ | 上一个 Composer |
-| ⌘ + \] | 下一个 Composer |
-| ⌘ + W | 关闭 Composer |
-| ↑ | 选择上一条消息 |
+| 功能 | Windows/Linux | macOS |
+|------|--------------|-------|
+| 在文件中查找 | Ctrl + F | ⌘ + F |
+| 在文件中替换 | Ctrl + H | ⌘ + H |
+| 在所有文件中查找 | Ctrl + Shift + F | ⌘ + Shift + F |
+| 在所有文件中替换 | Ctrl + Shift + H | ⌘ + Shift + H |
+| 查找下一个匹配项 | F3 | ⌘ + G |
+| 查找上一个匹配项 | Shift + F3 | ⌘ + Shift + G |
 
-## ⌘K 快捷键
+## Cursor AI 快捷键
 
-使用内联编辑功能时的快捷键：
+### AI 聊天与交互
 
-| 快捷键 | 操作 |
-| --- | --- |
-| ⌘ + K | 打开 |
-| ⌘ + Shift + K | 切换输入焦点 |
-| Enter | 提交 |
-| Option + Enter | 快速提问 |
+| 功能 | Windows/Linux | macOS |
+|------|--------------|-------|
+| 打开 AI 聊天 | Alt + L | Option + L |
+| 提交聊天消息 | Enter | Return |
+| 换行 | Shift + Enter | Shift + Return |
+| 打开 AI 设置 | Ctrl + Shift + J | ⌘ + Shift + J |
 
-## 代码选择与上下文快捷键
+### AI 编辑功能
 
-处理代码选择和上下文时的快捷键：
+| 功能 | Windows/Linux | macOS |
+|------|--------------|-------|
+| 启动 Agent | Ctrl + Shift + L | ⌘ + Shift + L |
+| 内联编辑 (⌘K) | Ctrl + K | ⌘ + K |
+| Tab 补全 | Tab | Tab |
+| 打开 Composer | Ctrl + I | ⌘ + I |
+| 全屏 Composer | Ctrl + Shift + I | ⌘ + Shift + I |
 
-| 快捷键 | 操作 |
-| --- | --- |
-| @ | [@符号引用](/context/@-symbols) |
-| # | 文件 |
-| ⌘ + Shift + L | 将选中内容添加到聊天 |
-| ⌘ + Shift + K | 将选中内容添加到编辑 |
-| ⌘ + L | 将选中内容添加到新聊天 |
-| ⌘ + M | 切换文件读取策略 |
-| ⌘ + → | 接受建议的下一个单词 |
-| ⌘ + Enter | 在聊天中搜索代码库 |
-| 选择代码, ⌘ + C, ⌘ + V | 添加复制的引用代码作为上下文 |
-| 选择代码, ⌘ + C, ⌘ + Shift + V | 添加复制的代码作为文本上下文 |
+### AI 上下文引用
 
-## Tab 快捷键
+| 功能 | Windows/Linux | macOS |
+|------|--------------|-------|
+| 使用 @ 符号引用 | @ | @ |
+| 获取光标位置上下文 | 自动 | 自动 |
 
-使用代码自动补全功能时的快捷键：
+关于 @ 符号引用的详细信息，请参阅 [@ 符号引用](/ai/cursor/at-references) 文档。
 
-| 快捷键 | 操作 |
-| --- | --- |
-| Tab | 接受建议 |
-| ⌘ + → | 接受下一个单词 |
+## 项目管理
 
-## 终端快捷键
+| 功能 | Windows/Linux | macOS |
+|------|--------------|-------|
+| 打开文件夹 | Ctrl + K Ctrl + O | ⌘ + K ⌘ + O |
+| 关闭文件夹 | Ctrl + K F | ⌘ + K F |
+| 切换终端 | Ctrl + ` | ⌘ + ` |
+| 新建终端 | Ctrl + Shift + ` | ⌘ + Shift + ` |
+| 打开源代码管理 | Ctrl + Shift + G | ⌘ + Shift + G |
+| 显示问题 | Ctrl + Shift + M | ⌘ + Shift + M |
+| 切换 Zen 模式 | Ctrl + K Z | ⌘ + K Z |
 
-在终端中使用 AI 功能时的快捷键：
+## 代码折叠
 
-| 快捷键 | 操作 |
-| --- | --- |
-| ⌘ + K | 打开终端提示栏 |
-| ⌘ + Enter | 运行生成的命令 |
-| Esc | 接受命令 |
+| 功能 | Windows/Linux | macOS |
+|------|--------------|-------|
+| 折叠代码块 | Ctrl + Shift + [ | ⌘ + Option + [ |
+| 展开代码块 | Ctrl + Shift + ] | ⌘ + Option + ] |
+| 折叠所有代码块 | Ctrl + K Ctrl + 0 | ⌘ + K ⌘ + 0 |
+| 展开所有代码块 | Ctrl + K Ctrl + J | ⌘ + K ⌘ + J |
+| 折叠级别 2-7 | Ctrl + K Ctrl + [2-7] | ⌘ + K ⌘ + [2-7] |
 
 ## 自定义快捷键
 
-您可以根据个人偏好自定义 Cursor 的键盘快捷键：
+您可以通过以下步骤自定义 Cursor 的键盘快捷键：
 
-1. 打开命令面板（⌘ + Shift + P 或 Ctrl + Shift + P）
-2. 搜索并选择 "Open Keyboard Shortcuts (JSON)"
-3. 在打开的 JSON 文件中添加或修改键位绑定
-4. 保存文件以应用更改
+1. 打开命令面板（Ctrl/⌘ + Shift + P）
+2. 输入 "Preferences: Open Keyboard Shortcuts"
+3. 在打开的快捷键编辑器中，您可以搜索命令和修改对应的键绑定
 
-例如，添加生成 Git 提交信息的快捷键：
+对于高级自定义，您可以直接编辑 `keybindings.json` 文件：
 
+1. 打开命令面板（Ctrl/⌘ + Shift + P）
+2. 输入 "Preferences: Open Keyboard Shortcuts (JSON)"
+3. 编辑 JSON 文件来添加或修改键绑定
+
+示例自定义键绑定：
 ```json
-{
-  "key": "cmd+m",
-  "command": "cursor.generateGitCommitMessage"
-}
+[
+  {
+    "key": "ctrl+shift+a",
+    "command": "cursor.agentFromPrompt",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+shift+a",
+    "command": "cursor.agentFromPrompt",
+    "when": "editorTextFocus && isMac"
+  }
+]
 ```
 
-## VS Code 兼容性
+## 快捷键提示
 
-由于 Cursor 基于 VS Code，大多数 VS Code 的快捷键在 Cursor 中也可以使用。常见的编辑操作、文件导航和窗口管理快捷键通常是相同的。
-
-如果您熟悉 VS Code 的快捷键，您会发现在 Cursor 中使用它们非常自然。主要区别在于 Cursor 添加了特定于 AI 功能的额外快捷键。
-
-## 快捷键冲突解决
-
-如果您发现键盘快捷键之间有冲突，可以通过以下方式解决：
-
-1. 打开键盘快捷键设置（⌘R ⌘S 或 Ctrl+R Ctrl+S）
-2. 搜索冲突的命令
-3. 右击冲突命令并选择"更改键位绑定"
-4. 指定一个新的、未使用的键位组合
+- 大多数 VS Code 快捷键在 Cursor 中都可以正常工作，因为 Cursor 基于 VS Code 构建
+- 您可以在设置中选择不同的键盘快捷键预设，包括 VS Code、Sublime Text 和 Vim 等
+- 使用命令面板（Ctrl/⌘ + Shift + P）来发现新命令和它们的快捷键
+- 在状态栏中查看当前模式（如拼写检查、Vim 模式等）
 
 ---
 
-掌握这些键盘快捷键将显著提高您使用 Cursor 的效率。随着使用经验的积累，这些快捷操作将成为您工作流程的自然部分，让您能够更流畅地利用 Cursor 的 AI 辅助编码功能。
-
-如有任何问题，请参考[常见问题解答](/cursor-faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 
+如有任何问题，请参考[常见问题解答](/ai/cursor/faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 

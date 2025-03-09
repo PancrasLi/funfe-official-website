@@ -225,4 +225,4 @@ Composer 非常适合实现跨多个文件的新功能：
 
 Composer 是 Cursor 最强大的功能之一，特别是对于需要对代码库进行广泛更改的任务。通过结合多文件编辑和智能 AI 对话，它成为复杂编码任务的理想工具。
 
-如有任何问题，请参考[常见问题解答](/cursor-faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 
+如有任何问题，请参考[常见问题解答](/ai/cursor/faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 

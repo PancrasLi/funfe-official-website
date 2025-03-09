@@ -163,4 +163,4 @@ Cursor 保留了所有 VS Code 的标准快捷键，例如：
 
 ---
 
-完成从 VS Code 迁移到 Cursor 后，您可以开始探索 Cursor 提供的强大 AI 功能。请查看[入门介绍](/cursor-introduction)了解如何开始使用这些功能，大幅提升您的编码效率！ 
+完成从 VS Code 迁移到 Cursor 后，您可以开始探索 Cursor 提供的强大 AI 功能。请查看[入门介绍](/ai/cursor/introduction)了解如何开始使用这些功能，大幅提升您的编码效率！ 

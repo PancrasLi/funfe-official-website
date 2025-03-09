@@ -86,4 +86,4 @@ Cursor Tab 的多字符编辑功能可以显著提高编码效率，特别是在
 
 ---
 
-希望本指南能帮助您了解 Cursor Tab 和 GitHub Copilot 之间的区别。如有任何问题，请参考[常见问题解答](/cursor-faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 
+希望本指南能帮助您了解 Cursor Tab 和 GitHub Copilot 之间的区别。如有任何问题，请参考[常见问题解答](/ai/cursor/faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 

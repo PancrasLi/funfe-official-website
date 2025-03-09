@@ -133,4 +133,4 @@ use std::collections::HashMap;
 
 自动导入是 Cursor 提供的众多生产力功能之一，它可以帮助您专注于编写代码逻辑，而不是管理导入语句。随着使用时间的增长，此功能会适应您的编码风格，提供越来越准确的导入建议。
 
-如有任何问题，请参考[常见问题解答](/cursor-faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 
+如有任何问题，请参考[常见问题解答](/ai/cursor/faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 

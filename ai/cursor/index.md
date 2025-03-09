@@ -79,7 +79,7 @@ Cursor 是一款不断发展的软件，定期接收更新和新功能。要获�
 
 - 访问[官方网站](https://cursor.com)获取最新更新
 - 加入[官方社区论坛](https://forum.cursor.com)与其他用户交流
-- 关注[GitHub 仓库](https://github.com/theapexlab/cursor-documentation)了解文档更新
+- 关注[GitHub 仓库](https://github.com/theapexlab/ai/cursor/documentation)了解文档更新
 - 查看[Beta 功能预览](/ai/cursor/beta)体验最新实验性功能
 
 ---

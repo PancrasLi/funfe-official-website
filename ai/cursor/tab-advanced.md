@@ -121,4 +121,4 @@ Tab 补全可以与 Cursor 的其他 AI 功能协同工作：
 
 充分利用 Cursor Tab 的高级功能可以显著提高您的编码效率和代码质量。通过实践和实验不同的设置，您可以找到最适合自己工作流程的配置。
 
-如有任何问题，请参考[常见问题解答](/cursor-faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 
+如有任何问题，请参考[常见问题解答](/ai/cursor/faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 

@@ -149,4 +149,4 @@ Cursor 的界面与 VS Code 相似，但有一些 AI 相关的增强功能：
 
 ---
 
-欢迎开始您的 Cursor 之旅！随着您更深入地使用 Cursor，您会发现它如何革命性地改变您的编码体验和效率。如有任何问题，请随时参考我们的[常见问题解答](/cursor-faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 
+欢迎开始您的 Cursor 之旅！随着您更深入地使用 Cursor，您会发现它如何革命性地改变您的编码体验和效率。如有任何问题，请随时参考我们的[常见问题解答](/ai/cursor/faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 

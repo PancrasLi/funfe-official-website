@@ -19,12 +19,12 @@
 
 * **键盘快捷键** - 如果您来自其他编辑器，可以选择您想要使用的默认快捷键，使其尽可能地符合您的使用习惯。
 * **语言** - 如果您希望 AI 使用不同的语言与您交流，可以输入您想使用的语言名称。这可以在 AI 规则中进一步配置。
-* **代码库索引** - Cursor 会在本地索引您的代码库，以提供更好的 AI 建议。在[代码库索引](/cursor-indexing)中了解更多信息。
+* **代码库索引** - Cursor 会在本地索引您的代码库，以提供更好的 AI 建议。在[代码库索引](/ai/cursor/codebase-indexing)中了解更多信息。
 * **CLI 快捷方式** - 您可以选择安装 `cursor` 和 `code` 命令，以便从终端启动 Cursor。
 
 配置完这些设置后，系统会提示您导入 VS Code 设置。如果您接受，Cursor 将导入您的扩展、主题、用户设置和键盘快捷键，让您可以立即开始使用。
 
-接下来，系统会询问您的数据偏好。在我们的[隐私页面](/cursor-privacy)了解更多相关信息。
+接下来，系统会询问您的数据偏好。您可以在[隐私页面](https://cursor.com/privacy)了解更多相关信息。
 
 如果需要，您可以通过在终端中这样启动 Cursor 来触发此视图：
 
@@ -47,7 +47,7 @@ cursor --user-data-dir=/some/new/path
 
 ## 下一步
 
-现在您已经安装了 Cursor，请前往[入门介绍](/cursor-introduction)了解 Cursor 的功能以及如何开始使用它们。
+现在您已经安装了 Cursor，请前往[入门介绍](/ai/cursor/introduction)了解 Cursor 的功能以及如何开始使用它们。
 
 ## 附加设置
 
@@ -113,4 +113,4 @@ cursor -n
 
 ---
 
-欢迎开始使用 Cursor！如果您在安装或设置过程中遇到任何问题，请查看我们的[故障排除指南](/cursor-troubleshooting)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 
+欢迎开始使用 Cursor！如果您在安装或设置过程中遇到任何问题，请查看我们的[常见问题解答](/ai/cursor/faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 
