@@ -67,6 +67,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: 'JS学习记录', link: '/class/js/index.md' },
+      { text: 'AI知识', link: '/ai/' },
      
       {
         text: '在线工具',
@@ -358,6 +359,15 @@ export default defineConfig({
             }
           ]
         }
+      ],
+      '/ai/': [
+        {
+          text: 'AI知识分享',
+          items: [
+            { text: '概述', link: '/ai/' },
+            // 可以在此处添加更多AI相关页面
+          ]
+        }
       ]
     },
 
@@ -444,6 +454,7 @@ export default defineConfig({
     externalLinks: {
       target: '_blank',
       rel: 'noopener noreferrer'
-    }
+    },
+    lineNumbers: true
   }
 })
