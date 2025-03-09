@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "FUNFE - 少儿编程教育与Cursor中文文档",
+  title: "FUNFE",
   description: "专注少儿编程教育与Cursor编辑器中文文档的在线学习平台，提供图形化编程、Scratch教程、JavaScript教程、Vue开发等优质内容，以及Base64转换、URL编解码、JSON格式化等实用在线工具",
   lang: 'zh-CN',
   base: '/',
@@ -47,14 +47,14 @@ export default defineConfig({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        'name': 'FUNFE - 少儿编程教育与Cursor中文文档',
+        'name': 'FUNFE',
         'url': 'https://funfe.cn',
         'potentialAction': {
           '@type': 'SearchAction',
           'target': 'https://funfe.cn/search?q={search_term_string}',
           'query-input': 'required name=search_term_string'
         },
-        'description': '专注少儿编程教育与Cursor编辑器中文文档的在线学习平台',
+        'description': '专注少儿编程教育与AI编程的学习平台',
         'author': {
           '@type': 'Organization',
           'name': 'FUNFE Team'
@@ -88,7 +88,20 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: 'JS学习记录', link: '/class/js/index.md' },
-      { text: 'AI知识', link: '/ai/' },
+      { text: 'AI教程',
+        items:[
+          {
+            text: 'AI基础',
+            link: '/ai/',
+            class: 'nav-ai-basic'
+          },
+          {
+            text: 'Cursor教程',
+            link: '/ai/cursor/index',
+            class: 'nav-cursor-docs'
+          },
+        ]
+      },
      
       {
         text: '在线工具',
@@ -137,11 +150,6 @@ export default defineConfig({
       {
         text: '少儿编程',
         link: '/kids/index.md'
-      },
-      {
-        text: 'Cursor教程',
-        link: '/ai/cursor/index',
-        class: 'nav-cursor-docs'
       },
       {
         text: '问AI',
