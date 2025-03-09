@@ -4,33 +4,6 @@
 
 > 本文档介绍如何在 Cursor Ask 中应用 AI 提出的代码建议，以及如何使用即时应用功能直接修改您的代码。
 
-## 导航菜单
-
-### 入门指南
-* [欢迎使用 Cursor](/cursor-welcome)
-* [安装指南](/cursor-install)
-* [从 VS Code 迁移](/cursor-migrate-vscode)
-* [入门介绍](/cursor-introduction)
-* [常见问题解答](/cursor-faq)
-
-### 编辑器功能
-* [Tab 智能补全](/cursor-tab)
-  * [概述](/cursor-tab)
-  * [Tab vs GitHub Copilot](/cursor-tab-vs-copilot)
-  * [自动导入](/cursor-auto-import)
-  * [高级功能](/cursor-tab-advanced)
-* [Agent 智能代理](/cursor-agent)
-* [Composer 多文件编辑](/cursor-composer)
-* [Ask 智能问答](/cursor-ask)
-  * [概述](/cursor-ask)
-  * [自定义设置](/cursor-ask-customize)
-  * [代码库交互](/cursor-ask-with-codebase)
-  * [应用建议](#cursor-ask-应用建议)
-* [⌘K 内联编辑](/cursor-cmd-k)
-* [AI 提交信息](/cursor-commit)
-* [Beta 功能预览](/cursor-beta)
-* [键盘快捷键](/cursor-shortcuts)
-
 ---
 
 ## 即时应用功能

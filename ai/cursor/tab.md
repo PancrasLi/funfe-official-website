@@ -4,29 +4,6 @@
 
 > 本文档介绍 Cursor 的智能代码自动补全功能 Tab，帮助您了解如何充分利用这一强大功能。
 
-## 导航菜单
-
-### 入门指南
-* [欢迎使用 Cursor](/cursor-welcome)
-* [安装指南](/cursor-install)
-* [从 VS Code 迁移](/cursor-migrate-vscode)
-* [入门介绍](/cursor-introduction)
-* [常见问题解答](/cursor-faq)
-
-### 编辑器功能
-* [Tab 智能补全](#cursor-tab-概述)
-  * [概述](#cursor-tab-概述)
-  * [Tab vs GitHub Copilot](/cursor-tab-vs-copilot)
-  * [自动导入](/cursor-auto-import)
-  * [高级功能](/cursor-tab-advanced)
-* [Agent 智能代理](/cursor-agent)
-* [Composer 多文件编辑](/cursor-composer)
-* [Ask 智能问答](/cursor-ask)
-* [⌘K 内联编辑](/cursor-cmd-k)
-* [AI 提交信息](/cursor-commit)
-* [Beta 功能预览](/cursor-beta)
-* [键盘快捷键](/cursor-shortcuts)
-
 ---
 
 ## 功能概述

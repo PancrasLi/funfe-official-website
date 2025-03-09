@@ -4,25 +4,6 @@
 
 > 本文档旨在帮助习惯使用 VS Code 的开发者顺利过渡到 Cursor。
 
-## 导航菜单
-
-### 入门指南
-* [欢迎使用 Cursor](/cursor-welcome)
-* [安装指南](/cursor-install)
-* [从 VS Code 迁移](#从-vs-code-迁移到-cursor)
-* [入门介绍](/cursor-introduction)
-* [常见问题解答](/cursor-faq)
-
-### 编辑器功能
-* [Tab 智能补全](/cursor-tab)
-* [Agent 智能代理](/cursor-agent)
-* [Composer 多文件编辑](/cursor-composer)
-* [Ask 智能问答](/cursor-ask)
-* [⌘K 内联编辑](/cursor-cmd-k)
-* [AI 提交信息](/cursor-commit)
-* [Beta 功能预览](/cursor-beta)
-* [键盘快捷键](/cursor-shortcuts)
-
 ---
 
 ## Cursor 与 VS Code 的关系

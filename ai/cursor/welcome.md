@@ -4,54 +4,6 @@
 
 > 本文档旨在帮助中文用户更好地了解和使用 Cursor 编辑器。
 
-## 导航菜单
-
-### 入门指南
-* [欢迎使用 Cursor](#欢迎使用-cursor)
-* [安装指南](/cursor-install)
-* [从 VS Code 迁移](/cursor-migrate-vscode)
-* [常见问题解答](/cursor-faq)
-
-### 编辑器功能
-* [Tab 智能补全](/cursor-tab)
-* [Agent 智能代理](/cursor-agent)
-* [Composer 多文件编辑](/cursor-composer)
-* [Ask 智能问答](/cursor-ask)
-* [⌘K 内联编辑](/cursor-cmd-k)
-* [AI 提交信息](/cursor-commit)
-* [Beta 功能预览](/cursor-beta)
-* [键盘快捷键](/cursor-shortcuts)
-
-### 上下文管理
-* [代码库索引](/cursor-indexing)
-* [AI 规则](/cursor-rules)
-* [@ 符号引用](/cursor-symbols)
-* [忽略文件](/cursor-ignore)
-* [模型上下文协议](/cursor-context)
-
-### 设置
-* [模型选择](/cursor-models)
-* [首选项](/cursor-preferences)
-* [自定义 API 密钥](/cursor-api-keys)
-
-### 账户
-* [使用情况](/cursor-usage)
-* [套餐计划](/cursor-plans)
-* [团队管理](/cursor-team)
-* [控制面板](/cursor-dashboard)
-* [账单](/cursor-billing)
-* [价格](/cursor-pricing)
-* [隐私](/cursor-privacy)
-* [安全](/cursor-security)
-
-### 故障排除
-* [常见问题](/cursor-issues)
-* [故障排除指南](/cursor-troubleshooting)
-* [获取请求 ID](/cursor-request-id)
-
-### 资源
-* [社区论坛](https://forum.cursor.com)
-
 ---
 
 ## 欢迎使用 Cursor

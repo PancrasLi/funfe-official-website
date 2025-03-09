@@ -4,35 +4,6 @@
 
 > 本文档介绍如何在 Cursor 中使用闪光图标或快捷键自动生成 Git 提交信息。
 
-## 导航菜单
-
-### 入门指南
-* [欢迎使用 Cursor](/cursor-welcome)
-* [安装指南](/cursor-install)
-* [从 VS Code 迁移](/cursor-migrate-vscode)
-* [入门介绍](/cursor-introduction)
-* [常见问题解答](/cursor-faq)
-
-### 编辑器功能
-* [Tab 智能补全](/cursor-tab)
-  * [概述](/cursor-tab)
-  * [Tab vs GitHub Copilot](/cursor-tab-vs-copilot)
-  * [自动导入](/cursor-auto-import)
-  * [高级功能](/cursor-tab-advanced)
-* [Agent 智能代理](/cursor-agent)
-* [Composer 多文件编辑](/cursor-composer)
-* [Ask 智能问答](/cursor-ask)
-  * [概述](/cursor-ask)
-  * [自定义设置](/cursor-ask-customize)
-  * [代码库交互](/cursor-ask-with-codebase)
-  * [应用建议](/cursor-ask-apply)
-* [⌘K 内联编辑](/cursor-cmd-k)
-  * [概述](/cursor-cmd-k)
-  * [终端中的 ⌘K](/cursor-terminal-cmd-k)
-* [AI 提交信息](#cursor-ai-提交信息)
-* [Beta 功能预览](/cursor-beta)
-* [键盘快捷键](/cursor-shortcuts)
-
 ---
 
 ## 自动生成提交信息

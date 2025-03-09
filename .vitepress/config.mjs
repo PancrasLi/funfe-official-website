@@ -367,6 +367,53 @@ export default defineConfig({
             { text: '概述', link: '/ai/' },
             // 可以在此处添加更多AI相关页面
           ]
+        },
+        {
+          text: 'Cursor AI 编辑器',
+          collapsed: false,
+          items: [
+            { text: '使用手册概述', link: '/ai/cursor/index' },
+            {
+              text: '入门指南',
+              collapsed: false,
+              items: [
+                { text: '欢迎使用 Cursor', link: '/ai/cursor/welcome' },
+                { text: '入门介绍', link: '/ai/cursor/introduction' },
+                { text: '安装指南', link: '/ai/cursor/install' },
+                { text: '从 VS Code 迁移', link: '/ai/cursor/migrate-vscode' },
+                { text: '常见问题解答', link: '/ai/cursor/faq' }
+              ]
+            },
+            {
+              text: '编辑器功能',
+              collapsed: false,
+              items: [
+                { text: 'Tab 智能补全', link: '/ai/cursor/tab' },
+                { text: 'Tab vs GitHub Copilot', link: '/ai/cursor/tab-vs-copilot' },
+                { text: '自动导入', link: '/ai/cursor/auto-import' },
+                { text: 'Tab 高级功能', link: '/ai/cursor/tab-advanced' },
+                { text: 'Agent 智能代理', link: '/ai/cursor/agent' },
+                { text: 'Composer 多文件编辑', link: '/ai/cursor/composer' },
+                { text: 'Ask 智能问答', link: '/ai/cursor/ask' },
+                { text: '⌘K 内联编辑', link: '/ai/cursor/cmd-k' },
+                { text: 'AI 提交信息', link: '/ai/cursor/commit' },
+                { text: 'Beta 功能预览', link: '/ai/cursor/beta' },
+                { text: '键盘快捷键', link: '/ai/cursor/shortcuts' }
+              ]
+            },
+            {
+              text: '上下文管理',
+              collapsed: false,
+              items: [
+                { text: '代码库索引', link: '/ai/cursor/codebase-indexing' },
+                { text: 'AI 规则', link: '/ai/cursor/rules-for-ai' },
+                { text: '@ 符号', link: '/ai/cursor/symbols' },
+                { text: '@ 引用详解', link: '/ai/cursor/at-references' },
+                { text: '忽略文件', link: '/ai/cursor/ignore-files' },
+                { text: '模型上下文协议', link: '/ai/cursor/model-context-protocol' }
+              ]
+            }
+          ]
         }
       ]
     },
