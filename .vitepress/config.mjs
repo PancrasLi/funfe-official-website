@@ -3,8 +3,8 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "FUNFE",
-  description: "专注前端技术分享与少儿编程教育的在线学习平台，提供JavaScript教程、Vue开发、图形化编程等优质内容，以及Base64转换、URL编解码、JSON格式化等实用在线工具",
+  title: "FUNFE - 少儿编程教育与Cursor中文文档",
+  description: "专注少儿编程教育与Cursor编辑器中文文档的在线学习平台，提供图形化编程、Scratch教程、JavaScript教程、Vue开发等优质内容，以及Base64转换、URL编解码、JSON格式化等实用在线工具",
   lang: 'zh-CN',
   base: '/',
   lastUpdated: true,
@@ -17,29 +17,50 @@ export default defineConfig({
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ['meta', { name: 'format-detection', content: 'telephone=no,email=no' }],
     ['meta', { name: 'author', content: 'FUNFE Team' }],
-    ['meta', { name: 'keywords', content: 'JavaScript教程,Vue3教程,前端开发,少儿编程,图形化编程,Scratch教程,Web开发,前端框架,编程思维,项目实战,Base64转换器,URL编解码工具,JSON格式化工具,HTML实体转换,图片转Base64,在线调色板,颜色转换器,渐变生成器' }],
-    ['meta', { name: 'description', content: '专注前端技术分享与少儿编程教育的在线学习平台，提供JavaScript教程、Vue开发、图形化编程等优质内容，以及Base64转换、URL编解码、JSON格式化等实用在线工具' }],
+    ['meta', { name: 'keywords', content: '少儿编程,儿童编程教育,编程启蒙,Scratch教程,图形化编程,Cursor编辑器,Cursor中文文档,AI编程助手,编程思维培养,JavaScript教程,Vue3教程,前端开发,Web开发,前端框架,编程思维,项目实战,Base64转换器,URL编解码工具,JSON格式化工具,HTML实体转换,图片转Base64,在线调色板,颜色转换器,渐变生成器' }],
+    ['meta', { name: 'description', content: '专注少儿编程教育与Cursor编辑器中文文档的在线学习平台，提供3-12岁儿童编程教育方案、Cursor AI编辑器使用指南、JavaScript教程、Vue开发等优质内容，以及实用在线工具集' }],
     ['meta', { name: 'robots', content: 'index, follow' }],
     ['meta', { name: 'googlebot', content: 'index, follow' }],
     ['meta', { name: 'baidu-site-verification', content: '' }], // 百度站长验证，需要填入验证码
     ['meta', { name: 'google-site-verification', content: '' }], // Google站长验证，需要填入验证码
     
     // Open Graph tags for social media
-    ['meta', { property: 'og:title', content: 'FUNFE - 探索前端技术，启发编程思维 | 在线工具集' }],
-    ['meta', { property: 'og:description', content: '专注前端技术分享与少儿编程教育的在线学习平台，提供JavaScript教程、Vue开发、图形化编程等优质内容，以及Base64转换、URL编解码、JSON格式化等实用在线工具' }],
+    ['meta', { property: 'og:title', content: 'FUNFE - 少儿编程教育与Cursor中文文档 | 在线工具集' }],
+    ['meta', { property: 'og:description', content: '专注少儿编程教育与Cursor编辑器中文文档的在线学习平台，提供3-12岁儿童编程启蒙、Cursor AI编辑器使用指南、JavaScript教程、Vue开发等优质内容，以及实用在线工具集' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:url', content: 'https://funfe.cn' }],
     ['meta', { property: 'og:image', content: 'https://funfe.cn/images/og-image.jpg' }],
-    ['meta', { property: 'og:site_name', content: 'FUNFE' }],
+    ['meta', { property: 'og:site_name', content: 'FUNFE - 少儿编程与Cursor中文文档' }],
     ['meta', { property: 'og:locale', content: 'zh_CN' }],
     
     // Twitter Card tags
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:site', content: '@funfe_cn' }],
     ['meta', { name: 'twitter:creator', content: '@funfe_cn' }],
-    ['meta', { name: 'twitter:title', content: 'FUNFE - 探索前端技术，启发编程思维 | 在线工具集' }],
-    ['meta', { name: 'twitter:description', content: '专注前端技术分享与少儿编程教育的在线学习平台，提供JavaScript教程、Vue开发、图形化编程等优质内容，以及Base64转换、URL编解码、JSON格式化等实用在线工具' }],
+    ['meta', { name: 'twitter:title', content: 'FUNFE - 少儿编程教育与Cursor中文文档 | 在线工具集' }],
+    ['meta', { name: 'twitter:description', content: '专注少儿编程教育与Cursor编辑器中文文档的在线学习平台，提供3-12岁儿童编程启蒙、Cursor AI编辑器使用指南等优质内容，以及实用在线工具集' }],
     ['meta', { name: 'twitter:image', content: 'https://funfe.cn/images/twitter-card.jpg' }],
+    
+    // 添加结构化数据
+    ['script', {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        'name': 'FUNFE - 少儿编程教育与Cursor中文文档',
+        'url': 'https://funfe.cn',
+        'potentialAction': {
+          '@type': 'SearchAction',
+          'target': 'https://funfe.cn/search?q={search_term_string}',
+          'query-input': 'required name=search_term_string'
+        },
+        'description': '专注少儿编程教育与Cursor编辑器中文文档的在线学习平台',
+        'author': {
+          '@type': 'Organization',
+          'name': 'FUNFE Team'
+        }
+      })
+    }],
     
     // Analytics
     ['script', {
@@ -116,6 +137,11 @@ export default defineConfig({
       {
         text: '少儿编程',
         link: '/kids/index.md'
+      },
+      {
+        text: 'Cursor教程',
+        link: '/ai/cursor/index',
+        class: 'nav-cursor-docs'
       },
       {
         text: '问AI',
@@ -243,6 +269,15 @@ export default defineConfig({
       ],
       '/kids/': [
         {
+          text: '少儿编程教育',
+          link: '/kids/index',
+          items: [
+            { text: '课程概览', link: '/kids/overview' },
+            { text: '教学理念', link: '/kids/philosophy' },
+            { text: '学习路径', link: '/kids/learning-path' }
+          ]
+        },
+        {
           text: '启蒙阶段 (3-6岁)',
           collapsed: false,
           items: [
@@ -369,7 +404,7 @@ export default defineConfig({
           ]
         },
         {
-          text: 'Cursor AI 编辑器',
+          text: 'Cursor AI 编辑器中文文档',
           collapsed: false,
           items: [
             { text: '使用手册概述', link: '/ai/cursor/index' },
