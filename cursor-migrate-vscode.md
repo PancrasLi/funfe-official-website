@@ -1,6 +1,8 @@
 # 从 VS Code 迁移到 Cursor
 
-> 本文档是 [Cursor 官方文档中"从 VS Code 迁移"部分](https://docs.cursor.com/get-started/migrate-from-vs-code)的中文翻译版本，旨在帮助习惯使用 VS Code 的开发者顺利过渡到 Cursor。
+> **免责声明**：本文档是 [Cursor 官方文档中"从 VS Code 迁移"部分](https://docs.cursor.com/get-started/migrate-from-vs-code)的**第三方非官方中文翻译**，仅供学习参考。内容可能不完全反映最新的官方信息，请以 [Cursor 官方文档](https://docs.cursor.com) 为准。所有商标和版权归 Cursor/Anysphere 公司所有。
+
+> 本文档旨在帮助习惯使用 VS Code 的开发者顺利过渡到 Cursor。
 
 ## 导航菜单
 

@@ -1,0 +1,155 @@
+# Cursor 终端中的 ⌘K
+
+> **免责声明**：本文档是 [Cursor 官方文档中关于终端 ⌘K 功能的页面](https://docs.cursor.com/cmdk/terminal)的**第三方非官方中文翻译**，仅供学习参考。内容可能不完全反映最新的官方信息，请以 [Cursor 官方文档](https://docs.cursor.com) 为准。所有商标和版权归 Cursor/Anysphere 公司所有。
+
+> 本文档介绍如何在 Cursor 的集成终端中使用 ⌘K（在 Windows/Linux 上为 Ctrl+K）功能来生成和执行命令。
+
+## 导航菜单
+
+### 入门指南
+* [欢迎使用 Cursor](/cursor-welcome)
+* [安装指南](/cursor-install)
+* [从 VS Code 迁移](/cursor-migrate-vscode)
+* [入门介绍](/cursor-introduction)
+* [常见问题解答](/cursor-faq)
+
+### 编辑器功能
+* [Tab 智能补全](/cursor-tab)
+  * [概述](/cursor-tab)
+  * [Tab vs GitHub Copilot](/cursor-tab-vs-copilot)
+  * [自动导入](/cursor-auto-import)
+  * [高级功能](/cursor-tab-advanced)
+* [Agent 智能代理](/cursor-agent)
+* [Composer 多文件编辑](/cursor-composer)
+* [Ask 智能问答](/cursor-ask)
+  * [概述](/cursor-ask)
+  * [自定义设置](/cursor-ask-customize)
+  * [代码库交互](/cursor-ask-with-codebase)
+  * [应用建议](/cursor-ask-apply)
+* [⌘K 内联编辑](/cursor-cmd-k)
+  * [概述](/cursor-cmd-k)
+  * [终端中的 ⌘K](#cursor-终端中的-k)
+* [AI 提交信息](/cursor-commit)
+* [Beta 功能预览](/cursor-beta)
+* [键盘快捷键](/cursor-shortcuts)
+
+---
+
+## 概述
+
+除了在代码编辑器中使用 ⌘K 功能外，Cursor 还支持在集成终端中使用 ⌘K 来生成和执行命令。这个功能特别有用，可以帮助您生成复杂的终端命令，执行常见的开发任务，以及解决终端命令语法的问题。
+
+## 终端中使用 ⌘K
+
+在 Cursor 的终端窗口中，按下 `Ctrl/⌘+K` 会调出与代码编辑器中相似的提示栏。不同之处在于，这里生成的内容是终端命令而非代码片段。
+
+当您在终端中使用 ⌘K 时：
+
+1. 可以用自然语言描述您想要执行的任务
+2. Cursor 会根据您的描述生成相应的终端命令
+3. 您可以直接执行这些命令或进行修改后再执行
+
+## 常见用例
+
+终端中的 ⌘K 功能特别适用于以下场景：
+
+### 1. 生成复杂命令
+
+对于难以记忆的复杂命令，例如：
+
+```bash
+# 请求："找出最近修改的5个文件并显示它们的权限"
+find . -type f -printf '%T@ %p %m\n' | sort -n | tail -5 | cut -f2- -d" "
+```
+
+### 2. 软件包管理
+
+轻松处理包安装和管理任务：
+
+```bash
+# 请求："安装React和TypeScript开发环境的必要包"
+npm install react react-dom typescript @types/react @types/react-dom
+```
+
+### 3. 文件操作
+
+执行文件查找、重命名、移动等操作：
+
+```bash
+# 请求："查找所有包含'TODO'的JavaScript文件"
+grep -r "TODO" --include="*.js" .
+```
+
+### 4. Git操作
+
+简化常见的Git工作流：
+
+```bash
+# 请求："创建一个新分支，提交更改并推送到远程"
+git checkout -b feature/new-feature
+git add .
+git commit -m "Add new feature"
+git push -u origin feature/new-feature
+```
+
+### 5. 项目设置
+
+快速设置项目环境：
+
+```bash
+# 请求："为Python创建一个新的虚拟环境并安装Flask"
+python -m venv venv
+source venv/bin/activate  # 在Windows上用 venv\Scripts\activate
+pip install flask
+```
+
+## 智能上下文理解
+
+终端中的 ⌘K 功能会考虑以下上下文来生成更相关的命令：
+
+1. **当前目录结构**：了解您当前工作的项目文件
+2. **最近执行的命令**：借鉴您的命令历史
+3. **项目类型**：识别是Node.js、Python、Java等项目
+4. **操作系统**：根据您的操作系统调整命令语法
+
+## 命令执行与修改
+
+当 Cursor 生成终端命令后，您可以：
+
+1. **直接执行**：按下 Enter 键直接执行生成的命令
+2. **修改后执行**：在执行前编辑命令以满足特定需求
+3. **逐步生成**：通过后续指令改进或修改命令
+
+## 安全注意事项
+
+使用终端中的 ⌘K 功能时，请注意以下安全事项：
+
+1. **审查命令**：在执行前始终审查生成的命令，特别是那些可能修改系统或删除文件的命令
+2. **权限控制**：谨慎执行需要提升权限（如 sudo）的命令
+3. **敏感信息**：避免在提示中包含密码或其他敏感信息
+
+## 使用技巧
+
+为了充分利用终端中的 ⌘K 功能，请考虑以下技巧：
+
+1. **提供足够上下文**：在描述中包含关键细节，如文件类型、目标路径等
+2. **从简单开始**：先尝试生成基本命令，然后逐步添加复杂性
+3. **学习生成的命令**：将其作为学习终端命令的机会
+4. **组合命令**：要求生成多步骤脚本以自动化复杂流程
+5. **调整命令**：根据您的特定需求调整生成的命令
+
+## 命令处理流程
+
+终端 ⌘K 功能的工作流程如下：
+
+1. **提示输入**：在终端中按下 `Ctrl/⌘+K` 并描述您需要的命令
+2. **命令生成**：Cursor 分析您的请求并生成相应的终端命令
+3. **命令预览**：生成的命令将显示在终端中，供您审查
+4. **执行或调整**：您可以直接执行命令或先进行修改
+5. **结果反馈**：根据命令执行的结果，您可以继续迭代请求
+
+---
+
+终端中的 ⌘K 功能是 Cursor 提供的强大辅助工具，它可以显著提高您在命令行环境中的工作效率。不论是执行复杂操作、自动化常见任务，还是学习新的命令语法，这个功能都能提供宝贵的帮助。
+
+如有任何问题，请参考[常见问题解答](/cursor-faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 

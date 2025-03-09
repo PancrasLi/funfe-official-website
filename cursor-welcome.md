@@ -1,6 +1,8 @@
 # Cursor 欢迎页面
 
-> 本文档是 [Cursor 官方文档](https://docs.cursor.com/get-started/welcome) 的中文翻译版本，旨在帮助中文用户更好地了解和使用 Cursor 编辑器。
+> **免责声明**：本文档是 [Cursor 官方文档](https://docs.cursor.com/get-started/welcome)的**第三方非官方中文翻译**，仅供学习参考。内容可能不完全反映最新的官方信息，请以 [Cursor 官方文档](https://docs.cursor.com) 为准。所有商标和版权归 Cursor/Anysphere 公司所有。
+
+> 本文档旨在帮助中文用户更好地了解和使用 Cursor 编辑器。
 
 ## 导航菜单
 

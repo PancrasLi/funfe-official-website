@@ -1,0 +1,159 @@
+# Cursor Tab 自动导入
+
+> **免责声明**：本文档是 [Cursor 官方文档中的自动导入页面](https://docs.cursor.com/tab/auto-import)的**第三方非官方中文翻译**，仅供学习参考。内容可能不完全反映最新的官方信息，请以 [Cursor 官方文档](https://docs.cursor.com) 为准。所有商标和版权归 Cursor/Anysphere 公司所有。
+
+> 本文档介绍 Cursor 的自动导入功能，它能够在您使用未导入的模块时自动添加必要的导入语句。
+
+## 导航菜单
+
+### 入门指南
+* [欢迎使用 Cursor](/cursor-welcome)
+* [安装指南](/cursor-install)
+* [从 VS Code 迁移](/cursor-migrate-vscode)
+* [入门介绍](/cursor-introduction)
+* [常见问题解答](/cursor-faq)
+
+### 编辑器功能
+* [Tab 智能补全](/cursor-tab)
+  * [概述](/cursor-tab)
+  * [Tab vs GitHub Copilot](/cursor-tab-vs-copilot)
+  * [自动导入](#cursor-tab-自动导入)
+  * [高级功能](/cursor-tab-advanced)
+* [Agent 智能代理](/cursor-agent)
+* [Composer 多文件编辑](/cursor-composer)
+* [Ask 智能问答](/cursor-ask)
+* [⌘K 内联编辑](/cursor-cmd-k)
+* [AI 提交信息](/cursor-commit)
+* [Beta 功能预览](/cursor-beta)
+* [键盘快捷键](/cursor-shortcuts)
+
+---
+
+## 功能概述
+
+Cursor 的自动导入功能能够在您键入代码时自动检测未导入的模块、函数或类，并为您添加必要的导入语句。这个功能适用于多种编程语言，特别是在 JavaScript、TypeScript 和 Python 中表现出色。
+
+## 工作原理
+
+当您开始键入一个尚未导入的符号时，Cursor 会：
+
+1. 识别您正在使用的未导入符号
+2. 搜索项目和已安装的依赖包中可能的匹配项
+3. 自动在文件顶部添加相应的导入语句
+4. 在某些情况下，提供多个可能的导入选项供您选择
+
+自动导入功能与 Tab 补全无缝集成，使您能够快速编写代码而不必担心手动管理导入。
+
+## 支持的语言
+
+自动导入功能支持以下主要编程语言：
+
+- **JavaScript/TypeScript** - 支持 ES 模块、CommonJS 和各种框架（React、Vue 等）
+- **Python** - 支持标准库和已安装的第三方包
+- **Rust** - 支持 crates 和模块导入
+- **Java** - 支持类和包的导入
+- **Go** - 支持包导入
+
+对于其他语言，Cursor 会尽可能提供基本的自动导入支持。
+
+## 使用方法
+
+自动导入功能默认启用，无需额外配置即可使用。以下是基本使用方法：
+
+1. 开始键入一个未导入的符号名称
+2. Cursor 会自动提示可能的匹配项
+3. 当您接受补全建议（通常通过按 Tab 键）时，相应的导入语句会自动添加到文件顶部
+4. 如果有多个可能的导入源，Cursor 会显示一个选择菜单
+
+## 配置选项
+
+您可以通过 Cursor 设置自定义自动导入行为：
+
+1. 打开 Cursor 设置（Cmd/Ctrl + Shift + J）
+2. 导航到"Tab 补全"部分
+3. 找到"自动导入"选项
+4. 您可以：
+   - 启用/禁用自动导入功能
+   - 配置导入语句的格式（例如，对于 JavaScript，选择使用 ES 模块或 CommonJS）
+   - 设置导入分组和排序首选项
+
+## 语言特定示例
+
+### JavaScript/TypeScript
+
+```javascript
+// 开始键入 "useState"
+const [count, setCount] = useState(0);
+
+// Cursor 会自动添加导入语句
+import { useState } from 'react';
+```
+
+### Python
+
+```python
+# 开始键入 "DataFrame"
+df = DataFrame(data)
+
+# Cursor 会自动添加导入语句
+from pandas import DataFrame
+# 或
+import pandas as pd  # 然后将代码更改为 pd.DataFrame
+```
+
+### Rust
+
+```rust
+// 开始键入 "HashMap"
+let scores = HashMap::new();
+
+// Cursor 会自动添加导入语句
+use std::collections::HashMap;
+```
+
+## 常见问题
+
+### 为什么某些导入没有自动添加？
+
+如果 Cursor 无法找到符号的来源，或者符号在项目中有多个潜在来源而无法确定，可能不会自动添加导入。在这种情况下，您可以：
+
+1. 尝试提供更具体的符号名称
+2. 手动导入所需的模块
+3. 确保您的项目配置正确，包括正确设置的依赖关系
+
+### 自动导入添加了错误的导入怎么办？
+
+如果 Cursor 添加了不正确的导入，您可以：
+
+1. 删除错误的导入
+2. 手动添加正确的导入
+3. 在设置中调整自动导入行为
+
+随着您在项目中的持续工作，Cursor 会学习您的导入偏好，未来的自动导入会变得更加准确。
+
+---
+
+## 进阶技巧
+
+### 优化导入管理
+
+除了基本的自动导入功能，Cursor 还提供了几个管理导入的高级功能：
+
+1. **导入整理** - 您可以使用快捷键或命令面板命令自动整理和优化所有导入
+2. **未使用导入移除** - Cursor 可以检测并移除未使用的导入
+3. **导入分组** - 根据您的偏好自动对导入进行分组（例如，标准库、第三方库和本地模块）
+
+### 提高自动导入准确性
+
+要提高自动导入的准确性，您可以：
+
+1. 确保您的项目结构良好，使用清晰的模块组织
+2. 保持依赖包的更新
+3. 对经常使用的导入使用一致的模式
+4. 在必要时向项目添加类型定义或类型提示
+
+---
+
+自动导入是 Cursor 提供的众多生产力功能之一，它可以帮助您专注于编写代码逻辑，而不是管理导入语句。随着使用时间的增长，此功能会适应您的编码风格，提供越来越准确的导入建议。
+
+如有任何问题，请参考[常见问题解答](/cursor-faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 

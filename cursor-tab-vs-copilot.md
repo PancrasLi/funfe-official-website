@@ -1,0 +1,112 @@
+# Cursor Tab vs GitHub Copilot
+
+> **免责声明**：本文档是 [Cursor 官方文档中的 Tab vs GitHub Copilot 页面](https://docs.cursor.com/tab/from-gh-copilot)的**第三方非官方中文翻译**，仅供学习参考。内容可能不完全反映最新的官方信息，请以 [Cursor 官方文档](https://docs.cursor.com) 为准。所有商标和版权归 Cursor/Anysphere 公司所有。
+
+> 本文档介绍 Cursor 的代码编辑功能如何通过多字符和基于指令的编辑超越 GitHub Copilot。
+
+## 导航菜单
+
+### 入门指南
+* [欢迎使用 Cursor](/cursor-welcome)
+* [安装指南](/cursor-install)
+* [从 VS Code 迁移](/cursor-migrate-vscode)
+* [入门介绍](/cursor-introduction)
+* [常见问题解答](/cursor-faq)
+
+### 编辑器功能
+* [Tab 智能补全](/cursor-tab)
+  * [概述](/cursor-tab)
+  * [Tab vs GitHub Copilot](#cursor-tab-vs-github-copilot)
+  * [自动导入](/cursor-auto-import)
+  * [高级功能](/cursor-tab-advanced)
+* [Agent 智能代理](/cursor-agent)
+* [Composer 多文件编辑](/cursor-composer)
+* [Ask 智能问答](/cursor-ask)
+* [⌘K 内联编辑](/cursor-cmd-k)
+* [AI 提交信息](/cursor-commit)
+* [Beta 功能预览](/cursor-beta)
+* [键盘快捷键](/cursor-shortcuts)
+
+---
+
+## Tab 功能改进
+
+Cursor 和 GitHub Copilot 的最大区别在于它们完成代码的方式。
+
+GitHub Copilot 只能在光标位置插入文本。它不能编辑光标周围的代码或删除文本。
+
+Cursor 不仅可以在光标位置插入文本，还能做更多事情：
+
+* 多字符编辑 - 可以同时修改多个字符和行
+* 基于指令的编辑 - 可以理解并执行高级编辑指令
+
+此外，Cursor 在上下文窗口中保存了您最近更改的历史记录，因此它能够了解您接下来想要做什么。
+
+## 从 GitHub Copilot 迁移
+
+由于 Cursor 默认集成了 GitHub Copilot 的功能，您可能同时安装了 GitHub Copilot 和 Cursor。我们建议当您想使用 Cursor 时关闭 GitHub Copilot。
+
+默认情况下，Cursor 优先于 GitHub Copilot。如果您想使用 GitHub Copilot，可以在设置中禁用 Cursor。
+
+---
+
+## 功能对比详解
+
+### 编辑能力
+
+| 功能 | GitHub Copilot | Cursor Tab |
+|------|---------------|------------|
+| 代码插入 | ✓ | ✓ |
+| 多行编辑 | ✗ | ✓ |
+| 现有代码修改 | ✗ | ✓ |
+| 代码删除 | ✗ | ✓ |
+| 基于上下文的建议 | 有限 | 全面 |
+| 记忆最近更改 | ✗ | ✓ |
+
+### 实际应用场景
+
+#### 场景一：修复错误
+
+**使用 GitHub Copilot**：
+- 必须手动删除错误代码
+- 然后在新的空白位置生成正确代码
+- 需要手动整合修复
+
+**使用 Cursor Tab**：
+- 直接识别错误并提供完整的修复建议
+- 可以直接替换有问题的代码段
+- 一步完成错误修复
+
+#### 场景二：重构代码
+
+**使用 GitHub Copilot**：
+- 必须逐步进行，无法一次重构整个函数
+- 需要手动协调多处更改
+
+**使用 Cursor Tab**：
+- 能够理解整个函数的结构和意图
+- 提供整体重构建议，保持功能完整性
+- 减少重构过程中的错误风险
+
+### 工作流程优化
+
+Cursor Tab 的多字符编辑功能可以显著提高编码效率，特别是在以下情况：
+
+1. **变量重命名** - 自动检测并一次性重命名所有相关引用
+2. **函数签名修改** - 更新参数时自动调整函数体内的相关代码
+3. **条件逻辑优化** - 重写条件语句以提高可读性或性能
+4. **格式调整** - 根据上下文自动调整代码格式和样式
+
+## 如何选择
+
+在两种工具之间做选择时，请考虑以下因素：
+
+- **编码风格**：如果您喜欢更具指导性的补全，Cursor Tab 可能更适合您
+- **项目复杂度**：复杂项目可能会从 Cursor 的多字符编辑中受益更多
+- **个人习惯**：如果您已经习惯了 GitHub Copilot 的工作方式，可能需要一些时间来适应 Cursor
+
+无论您选择哪种工具，它们都能显著提高您的编码效率。对于新用户，我们建议尝试 Cursor Tab，体验其增强的编辑功能。
+
+---
+
+希望本指南能帮助您了解 Cursor Tab 和 GitHub Copilot 之间的区别。如有任何问题，请参考[常见问题解答](/cursor-faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 

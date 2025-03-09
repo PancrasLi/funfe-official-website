@@ -1,0 +1,100 @@
+# Cursor Tab 概述
+
+> **免责声明**：本文档是 [Cursor 官方文档中的 Tab 概述页面](https://docs.cursor.com/tab/overview)的**第三方非官方中文翻译**，仅供学习参考。内容可能不完全反映最新的官方信息，请以 [Cursor 官方文档](https://docs.cursor.com) 为准。所有商标和版权归 Cursor/Anysphere 公司所有。
+
+> 本文档介绍 Cursor 的智能代码自动补全功能 Tab，帮助您了解如何充分利用这一强大功能。
+
+## 导航菜单
+
+### 入门指南
+* [欢迎使用 Cursor](/cursor-welcome)
+* [安装指南](/cursor-install)
+* [从 VS Code 迁移](/cursor-migrate-vscode)
+* [入门介绍](/cursor-introduction)
+* [常见问题解答](/cursor-faq)
+
+### 编辑器功能
+* [Tab 智能补全](#cursor-tab-概述)
+  * [概述](#cursor-tab-概述)
+  * [Tab vs GitHub Copilot](/cursor-tab-vs-copilot)
+  * [自动导入](/cursor-auto-import)
+  * [高级功能](/cursor-tab-advanced)
+* [Agent 智能代理](/cursor-agent)
+* [Composer 多文件编辑](/cursor-composer)
+* [Ask 智能问答](/cursor-ask)
+* [⌘K 内联编辑](/cursor-cmd-k)
+* [AI 提交信息](/cursor-commit)
+* [Beta 功能预览](/cursor-beta)
+* [键盘快捷键](/cursor-shortcuts)
+
+---
+
+## 功能概述
+
+Cursor Tab 是我们原生的代码自动补全功能。它是一个更强大的 Copilot，能够提供完整的代码差异建议，并具有特别出色的记忆能力。
+
+由自定义模型驱动，Cursor Tab 能够：
+
+* 提供光标周围的编辑建议，而不仅仅是插入额外代码。
+* 一次性修改多行代码。
+* 根据您最近的更改和代码检查器（linter）错误提供建议。
+
+免费用户可以获得 2000 次免费建议。Pro 和 Business 计划用户可以获得无限次建议。
+
+## 用户界面
+
+当 Cursor 仅添加额外文本时，补全内容会以灰色文本显示。如果建议修改现有代码，它将在当前行右侧显示为差异弹窗。
+
+您可以按 `Tab` 键接受建议，或按 `Esc` 键拒绝它。要逐字部分接受建议，请按 `Ctrl/⌘ →`。要拒绝建议，只需继续输入，或使用 `Escape` 取消/隐藏建议。
+
+每次按键或光标移动时，Cursor 都会尝试根据您最近的更改提供建议。但是，Cursor 不会总是显示建议；有时模型会预测不需要进行任何更改。
+
+Cursor 可以从当前行上方一行到下方两行进行更改。
+
+## 切换开关
+
+要打开或关闭此功能，请将鼠标悬停在应用程序右下角状态栏上的"Cursor Tab"图标上。
+
+## 键盘快捷键
+
+您可以通过从 Cursor 菜单中选择"设置 > 键盘快捷键"并搜索 `Accept Cursor Tab Suggestions` 来为 Cursor Tab 绑定自定义键盘快捷键。
+
+## 常见问题
+
+### Tab 在写注释时会干扰我，我该怎么办？
+
+您可以通过进入 `Cursor 设置` > `Tab 补全` 并取消勾选"在注释中触发"来禁用注释中的 Cursor Tab。
+
+---
+
+## 使用技巧
+
+### 有效利用 Tab 自动补全
+
+要充分利用 Cursor Tab 功能，请考虑以下技巧：
+
+1. **熟悉接受建议的方式** - 使用 Tab 完全接受，使用 Ctrl/⌘ → 部分接受建议
+2. **观察灰色预览** - 了解 Cursor 的预测方向，以便决定是接受还是拒绝
+3. **关注差异弹窗** - 当 Cursor 建议修改现有代码时，仔细查看弹窗中的变更建议
+4. **允许学习时间** - Tab 功能会随着使用逐渐适应您的编码风格
+
+### 调整设置
+
+如果您发现 Tab 建议过于频繁或不够相关，可以调整相关设置：
+
+1. 打开 Cursor 设置（Cmd/Ctrl + Shift + J）
+2. 导航到"Tab 补全"部分
+3. 调整触发设置，例如在特定文件类型中启用/禁用，或调整注释中的行为
+
+### 与其他 AI 功能结合使用
+
+Cursor Tab 可以与其他 AI 功能协同工作：
+
+* 使用 **Tab** 进行小型、增量代码补全
+* 使用 **⌘K** 进行更大的代码块编辑
+* 使用 **Ask** 为更复杂的代码生成获取指导
+* 使用 **Agent** 处理跨多个文件的大规模代码更改
+
+---
+
+希望本指南能帮助您充分利用 Cursor Tab 功能，提高编码效率。如有任何问题，请参考[常见问题解答](/cursor-faq)或访问[社区论坛](https://forum.cursor.com)寻求帮助。 

@@ -65,7 +65,7 @@
 ## Cursor 使用手册
 
 ::: info Cursor 使用手册
-Cursor 是一款由人工智能驱动的代码编辑器，可以帮助开发者更高效地编写、理解和调试代码。本手册提供了关于如何充分利用 Cursor 各项功能的详细指南，帮助您显著提升开发效率。
+Cursor 是一款由人工智能驱动的代码编辑器，可以帮助开发者更高效地编写、理解和调试代码。本手册提供了关于如何充分利用 Cursor 各项功能的详细指南，帮助您显著提升开发效率。以下文档为**第三方非官方翻译**，仅供学习参考。
 :::
 
 <div class="ai-topic-card">
@@ -79,17 +79,36 @@ Cursor 是一款由人工智能驱动的代码编辑器，可以帮助开发者�
   </div>
   <div class="ai-topic-content">
     <h3>掌握 Cursor 编辑器的功能与技巧</h3>
-    <p>我们提供了全面的 Cursor 使用手册，帮助您快速上手并充分发挥这款 AI 驱动编辑器的潜力：</p>
+    <p>我们提供了 Cursor 使用手册的非官方中文翻译，帮助您快速上手并充分发挥这款 AI 驱动编辑器的潜力。内容可能不完全反映最新的官方信息，请以 <a href="https://docs.cursor.com" target="_blank">Cursor 官方文档</a> 为准。</p>
     <ul>
       <li><a href="/ai/cursor"><strong>Cursor AI 编辑器</strong></a> - 核心功能与使用指南</li>
       <li><a href="/cursor-manual"><strong>完整使用手册</strong></a> - 从入门到精通的详细指南</li>
-      <li><strong>Cursor 官方文档翻译</strong>：</li>
+      <li><strong>Cursor 官方文档第三方翻译</strong>：</li>
       <ul>
         <li><a href="/cursor-welcome"><strong>欢迎使用 Cursor</strong></a> - 官方文档欢迎页面翻译</li>
         <li><a href="/cursor-introduction"><strong>入门介绍</strong></a> - 功能概览与快速上手指南</li>
         <li><a href="/cursor-install"><strong>安装指南</strong></a> - 详细的安装与设置流程</li>
         <li><a href="/cursor-migrate-vscode"><strong>从 VS Code 迁移</strong></a> - VS Code 用户快速过渡指南</li>
         <li><a href="/cursor-faq"><strong>常见问题解答</strong></a> - 关于使用、功能和技术的常见问题</li>
+        <li><a href="/cursor-tab"><strong>Tab 智能补全</strong></a> - 强大的代码自动补全功能</li>
+        <li><a href="/cursor-tab-vs-copilot"><strong>Tab vs GitHub Copilot</strong></a> - 功能对比和迁移指南</li>
+        <li><a href="/cursor-auto-import"><strong>自动导入</strong></a> - 智能管理代码导入语句</li>
+        <li><a href="/cursor-tab-advanced"><strong>Tab 高级功能</strong></a> - 上下文感知和个性化定制</li>
+        <li><a href="/cursor-agent"><strong>Agent 智能代理</strong></a> - AI 结对编程助手</li>
+        <li><a href="/cursor-composer"><strong>Composer 多文件编辑</strong></a> - 同时处理多个文件的工具</li>
+        <li><a href="/cursor-ask"><strong>Ask 智能问答</strong></a> - 代码理解与问题解答</li>
+          <ul>
+            <li><a href="/cursor-ask-customize"><strong>Ask 自定义设置</strong></a> - 在编辑器中使用聊天功能</li>
+            <li><a href="/cursor-ask-with-codebase"><strong>Ask 代码库交互</strong></a> - 使用代码库上下文提问</li>
+            <li><a href="/cursor-ask-apply"><strong>Ask 应用建议</strong></a> - 应用 AI 代码建议</li>
+          </ul>
+        <li><a href="/cursor-cmd-k"><strong>⌘K 内联编辑</strong></a> - 强大的内联代码生成与编辑工具</li>
+          <ul>
+            <li><a href="/cursor-terminal-cmd-k"><strong>终端中的 ⌘K</strong></a> - 在终端中生成和执行命令</li>
+          </ul>
+        <li><a href="/cursor-commit"><strong>AI 提交信息</strong></a> - 自动生成 Git 提交说明</li>
+        <li><a href="/cursor-beta"><strong>Beta 功能预览</strong></a> - 体验 Cursor 最新实验性功能</li>
+        <li><a href="/cursor-shortcuts"><strong>键盘快捷键</strong></a> - 全面的快捷键参考指南</li>
       </ul>
       <li><strong>主要功能亮点</strong>：</li>
       <ul>
@@ -100,6 +119,7 @@ Cursor 是一款由人工智能驱动的代码编辑器，可以帮助开发者�
         <li>高效键盘快捷键系统</li>
       </ul>
     </ul>
+    <p><small>注：所有 Cursor 商标和版权归 Cursor/Anysphere 公司所有。</small></p>
   </div>
 </div>
 
